@@ -1,0 +1,218 @@
+﻿
+#####################################################################################
+
+Object reference not set to an instance of an object.'
+
+if (Request.QueryString["ClientId"] != null)
+{
+    // int ClientId = Convert.ToInt32(Request.QueryString["ClientId"].ToString());
+    txtClientId.Text = Request.QueryString["ClientId"].ToString();
+    txtClientId_TextChanged(sender, e);
+}
+---------------------------------
+
+Icon Buttons
+
+     <div class="iconslist">
+        <div class="icon">
+          <i class="bx bx-printer"></i>
+          <div class="label">bx-printer</div>
+        </div>
+        <div class="icon">
+          <i class="bx bxs-edit"></i>
+          <div class="label">bxs-edit</div>
+        </div>
+        <div class="icon">
+          <i class="bx bxs-trash-alt"></i>
+          <div class="label">bxs-trash-alt</div>
+        </div>
+        <div class="icon">
+          <i class="bx bx-copy"></i>
+          <div class="label">bx-copy</div>
+        </div>
+        <div class="icon">
+          <i class="bx bxs-phone-call"></i>
+          <div class="label">bxs-phone-call</div>
+        </div>
+        <div class="icon">
+          <i class="bx bxs-message-alt-detail"></i>
+          <div class="label">bxs-message-alt-detail</div>
+        </div>
+        <div class="icon">
+          <i class="bx bxl-whatsapp"></i>
+          <div class="label">bxl-whatsapp</div>
+        </div>
+        <div class="icon">
+          <i class="bx bx-mail-send"></i>
+          <div class="label">bx-mail-send</div>
+        </div>
+     </div>
+
+
+       style="margin: 5px !important;"
+
+----------------------------------------------------------------------------------------
+
+https://www.codingfusion.com/Post/All-ASP-NET-GridView-Events-Explained-for-Beginners
+
+https://www.codeproject.com/Articles/50540/GridView-Event-Handling
+
+https://www.c-sharpcorner.com/blogs/all-gridview-events-for-beginners1
+
+https://www.aspsnippets.com/Articles/1883/Implement-Button-Click-event-in-ASPNet-GridView-using-C-and-VBNet/
+
+
+
+https://www.telerik.com/products/aspnet-ajax/documentation/getting-started/installation/web-config-settings-overview
+
+  <configSections>
+    <sectionGroup name="telerik.web.ui">
+      <section name="radCloudUpload" type="Telerik.Web.UI.CloudUploadConfigurationSection" allowDefinition="MachineToApplication" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+
+    <system.webServer>
+    <handlers>
+      <add name="Telerik_Web_UI_WebResource_axd" path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResourceSession" verb="*" preCondition="integratedMode" />
+    </handlers>
+  </system.webServer>
+  
+  <appSettings>
+    <add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+    <add key="Telerik.Skin" value="Black" />
+
+    <!-- Read more at: https://docs.telerik.com/devtools/aspnet-ajax/controls/asyncupload/security -->
+    <add key="Telerik.AsyncUpload.ConfigurationEncryptionKey" value="YOUR-FIRST-UNIQUE-STRONG-RANDOM-VALUE-UNIQUE-TO-YOUR-APP"></add>
+    <add key="Telerik.Upload.ConfigurationHashKey" value="YOUR-SECOND-UNIQUE-STRONG-RANDOM-VALUE-UNIQUE-TO-YOUR-APP"></add>
+    <add key="Telerik.Upload.AllowedCustomMetaDataTypes" value="Telerik.Web.UI.AsyncUploadConfiguration" />
+    <!-- Read more at:   https://docs.telerik.com/devtools/aspnet-ajax/controls/editor/functionality/dialogs/security -->
+    <add key="Telerik.Web.UI.DialogParametersEncryptionKey" value="YOUR-THIRD-UNIQUE-STRONG-RANDOM-VALUE-UNIQUE-TO-YOUR-APP"></add>
+    
+  </appSettings>
+
+  
+    <httpHandlers>
+      <add path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResourceSession" verb="*" validate="false" />
+    </httpHandlers>
+
+    https://stackoverflow.com/questions/15150498/error-sanitizer-provider-is-not-configured-in-the-web-config-file
+
+     <sanitizer defaultProvider="HtmlAgilityPackSanitizerProvider">
+    <providers>
+      <add name="HtmlAgilityPackSanitizerProvider" type="AjaxControlToolkit.Sanitizer.HtmlAgilityPackSanitizerProvider"></add>
+    </providers>
+  </sanitizer>
+
+
+
+  https://www.telerik.com/products/aspnet-ajax/documentation/controls/combobox/overview
+
+
+  ###############   IMPORT / EXPORT DATABASE    #######################3
+
+  
+Import/Export Database 
+
+Import/Export Database Feature: 
+
+Our clinic management app utilizes an offline 
+database, meaning it can only be actively used on one 
+device at a time. The Import/Export feature comes in 
+handy when you switch devices and want to transfer 
+your valuable clinic data securely. 
+
+Here's how it works: 
+
+Export a database: 
+
+• Create a Backup : The app generates a complete 
+copy of your clinic data named "clinic.db". 
+
+• Secure Your Backup : We recommend you to save it 
+in a safe and secure location. Remember, this data 
+represents your entire clinic's offline information. 
+
+• Verify Everything : Use an SQLite viewer to confirm 
+all your data is present before proceeding. 
+
+Import a database: 
+• Transfer the Backup : Move the "clinic.db" file to 
+your new device. 
+
+• Import and Resume : Use the app to import the 
+backup and get back to managing your clinic instantly. 
+
+• Restart for Smoothness : For optimal performance, 
+restart the app after a successful import. 
+
+Disclaimer: 
+
+While the Import/Export feature is designed to be 
+secure and reliable, please be aware of the following: 
+
+• Data Privacy : You are solely responsible for the 
+security and privacy of your exported database. We 
+recommend storing it in a secure and encrypted 
+location. 
+
+----------------------------------------
+
+
+Import/Export Database 
+
+• verny everytrung : Use an bQLlte viewer 10 connrm 
+all your data is present before proceeding. 
+
+Import a database: 
+
+• Transfer the Backup : Move the "clinic.db" file to 
+your new device. 
+
+• Import and Resume : Use the app to import the 
+backup and get back to managing your clinic instantly. 
+
+• Restart for Smoothness : For optimal performance, 
+restart the app after a successful import. 
+
+Disclaimer: 
+
+While the Import/Export feature is designed to be 
+secure and reliable, please be aware of the following: 
+
+• Data Privacy : You are solely responsible for the 
+security and privacy of your exported database. We 
+recommend storing it in a secure and encrypted 
+location. 
+
+• Compatibility: We strive to maintain compatibility 
+between app versions, but future updates might impact 
+import functionality. Always back up before updating. 
+
+• Data Loss : We cannot guarantee against potential 
+data loss during export, import, or device transfer. 
+Always double-check your data before relying on the 
+imported database. 
+
+• Limited Support : This feature is provided as-is with 
+limited technical support. For complex migration 
+issues, we recommend consulting a data specialist. 
+
+By using the Import/Export feature, you acknowledge 
+and agree to these terms and conditions. 
+
+Export Database 
+
+
+Import Database 
+
+
+
+#########################################
+
+
+
+
+
+
+
+
