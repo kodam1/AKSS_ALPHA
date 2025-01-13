@@ -10,11 +10,57 @@
           height:20px
       }
   </style>
+
+    <script type="text/javascript">
+      
+        function showModal(title, bodyContent, saveButtonHandler) {
+            debugger;
+            $('#modalTitle').text(title);
+            $('#modalBody').html(bodyContent);
+
+            // Bind click event handler to the Save button
+            $('#modalSaveButton').off('click').on('click', function () {
+                if (saveButtonHandler && typeof saveButtonHandler === 'function') {
+                    saveButtonHandler();
+                }
+                $('#dynamicModal').modal('hide');
+            });
+
+            $('#dynamicModal').modal('show');
+        }
+
+        //showModal('Dynamic Title', '<p>This is dynamic content.</p>', function () {
+        //    alert('Save button clicked!');
+        //});
+
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    
-          <main id="main" class="main">
+
+    <main id="main" class="main">
+
+        <!-- Bootstrap Modal Structure -->
+        <div id="dynamicModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- Modal Content Here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" id="modalSaveButton">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 <%--    <div class="pagetitle">
       <h1>User Master</h1>
@@ -121,27 +167,60 @@
                                                  <td>
                                                      <b>Mob No:</b>
                                                      <asp:Label ID="LblContactNumber" runat="server" Text='<%# Bind("Contact_Number") %>' Font-Bold="false"></asp:Label>
+
                                                     <span style="float: right;">
-                                                        <%--<asp:Button ID="GvBtn_Edit" runat="server" Text="Edit" CssClass="btn btn-primary" />--%>
-                                                        <a id="A_GvBtn_Edit" runat="server" class="btn btn-primary m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"
-                                                            CommandName="Edit"
-                                                            CommandArgument="<%# Container.DataItemIndex %>">
-                                                            
+
+                                                        <i class="bx bxs-edit me-1 m-1"
+                                                            style="background-color: #0d6efd; border-radius: 5px; margin-left: -15px; color: #ffffff; font-weight: 100; 
+                                                            padding-left: 10px;">
+                                                            <asp:Button ID="GvBtn_Edit" runat="server" Text="Edit" CssClass="btn btn-primary  m-1"
+                                                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"                                                                                                                                
+                                                                OnclientClick="return confirm('Are you sure you want to edit this user?');"
+                                                                CommandName="GvBtn_Edit" style="font-family: arial;"
+                                                                CommandArgument="<%# Container.DataItemIndex %>"/>
+                                                        </i>
+
+                                                        <%--OnClientClick="showModal('Edit Record','Are you sure you want to edit this record ?','')"--%>
+
+                                                        <i class="bx bxs-trash-alt me-1 m-1"
+                                                            style="background-color: #dc3545; border-radius: 5px; margin-left: -15px; color: #ffffff; font-weight: 100; 
+                                                            padding-left: 10px;">
+                                                            <asp:Button ID="GvBtn_Delete" runat="server" Text="Delete" CssClass="btn btn-danger m-1"
+                                                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"
+                                                                OnclientClick="return confirm('Are you sure you want to delete this user?');"
+                                                                CommandName="GvBtn_Delete" style="font-family: arial;"
+                                                                CommandArgument="<%# Container.DataItemIndex %>"/>
+                                                        </i>
+
+                                                        <i class="bx bxs-calendar-event me-1 m-1"
+                                                            style="background-color: #ffc107; border-radius: 5px; margin-left: -15px; color: #ffffff; font-weight: 100; 
+                                                            padding-left: 10px;">
+                                                            <asp:Button ID="GvBtn_Create_Appointment" runat="server" Text="Create Appointment" CssClass="btn btn-warning  m-1"
+                                                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Create Appointment"
+                                                                OnclientClick="return confirm('Are you sure you want to create appointment for his user?');"
+                                                                CommandName="GvBtn_Create_Appointment" style="font-family: arial;"
+                                                                CommandArgument="<%# Container.DataItemIndex %>"/>
+                                                        </i>
+
+                                                        <a id="A_GvBtn_Edit" visible="false" runat="server" class="btn btn-primary m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"
+                                                            CommandName="A_GvBtn_Edit"
+                                                            CommandArgument="<%# Container.DataItemIndex %>">                                                            
                                                             <i class="bx bxs-edit me-1"></i>Edit
                                                         </a>
-                                                        <a id="A_GvBtn_Delete" runat="server" class="btn btn-danger m-1" data-bs-toggle="tooltip"
-                                                            data-bs-placement="bottom" title="Delete" commandname="Delete"
+
+                                                        <a id="A_GvBtn_Delete" visible="false"  runat="server" class="btn btn-danger m-1" data-bs-toggle="tooltip"
+                                                            data-bs-placement="bottom" title="Delete" commandname="A_GvBtn_Delete"
                                                             commandargument="<%# Container.DataItemIndex %>">
                                                             <i class="bx bxs-trash-alt me-1"></i>Delete
                                                         </a>
-                                                        <a id="A_GvBtn_Create_Appointment" runat="server" class="btn btn-warning  m-1" data-bs-toggle="tooltip" 
+
+                                                        <a id="A_GvBtn_Create_Appointment"  visible="false" runat="server" class="btn btn-warning  m-1" data-bs-toggle="tooltip" 
                                                             data-bs-placement="bottom" title="Create Appointment"
-                                                            commandname="Create_Appointment"
+                                                            commandname="A_GvBtn_Create_Appointment"
                                                             commandargument="<%# Container.DataItemIndex %>">
                                                             <i class="bx bxs-calendar-event me-1"></i>Create Appointment
-
-
                                                         </a>
+
                                                     </span>
 
                                                  </td>
@@ -163,7 +242,6 @@
                                                  <td>
                                                      <asp:Label ID="LblNotes" runat="server" Text='<%# Bind("Notes") %>'></asp:Label></td>
                                              </tr>--%>
-
                                          </table>
                                       <%--   <div class="col-md-12 " style="display: block;">
                                              <div class="form-floating">

@@ -88,7 +88,7 @@ namespace AKSS_Management.CMIS
 
                 if (id != null)
                 {
-                    Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + id);
+                    Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + id,false);
                 }
 
                 // Delete the row from the database
@@ -97,16 +97,16 @@ namespace AKSS_Management.CMIS
                 //lblMessage.Text = "Row deleted successfully!";
                 //BindGridView(); // Refresh GridView after deletion
             }
-            if (e.CommandName == "Edit")
+            else if (e.CommandName == "A_GvBtn_Edit" || e.CommandName == "GvBtn_Edit")
             {
                 int rowIndex = Convert.ToInt32(e.CommandArgument);
                 int? id = Convert.ToInt32(gv.DataKeys[rowIndex].Value);                
                 if (id != null)
                 {
-                    Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + id);
+                    Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + id, false);
                 }                
             }
-            if (e.CommandName == "Delete")
+            else if (e.CommandName == "A_GvBtn_Delete" || e.CommandName == "GvBtn_Delete")
             {
                 int rowIndex = Convert.ToInt32(e.CommandArgument);
                 int? id = Convert.ToInt32(gv.DataKeys[rowIndex].Value);                
@@ -139,14 +139,14 @@ namespace AKSS_Management.CMIS
                     }
                 }               
             }
-            if (e.CommandName == "Create_Appointment")
+            else if (e.CommandName == "A_GvBtn_Create_Appointment" || e.CommandName == "GvBtn_Create_Appointment")
             {
                 int rowIndex = Convert.ToInt32(e.CommandArgument);
                 int? id = Convert.ToInt32(gv.DataKeys[rowIndex].Value);
                
                 if (id != null)
                 {
-                    Response.Redirect("/CMIS/CMIS_Appointment.aspx?ID=" + id);
+                    Response.Redirect("/CMIS/CMIS_Appointment.aspx?ID=" + id, false);
                 }
             }
         }
@@ -191,6 +191,10 @@ namespace AKSS_Management.CMIS
             //required to avoid the runtime error "
             //Control 'GridView1' of type 'GridView' must be placed inside a form tag with runat=server."
         }
+
+
+
+
 
     }
 }
