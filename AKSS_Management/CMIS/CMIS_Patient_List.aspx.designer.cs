@@ -78,6 +78,24 @@ namespace AKSS_Management.CMIS
         protected global::System.Web.UI.WebControls.Panel PnlGV;
 
         /// <summary>
+        /// Txt_GV_Custom_Search1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txt_GV_Custom_Search1;
+
+        /// <summary>
+        /// Txt_GV_Custom_Search control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txt_GV_Custom_Search;
+
+        /// <summary>
         /// gv control.
         /// </summary>
         /// <remarks>

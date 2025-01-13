@@ -1,9 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Threading.Tasks;
+using System.Web.Security;
+using ClosedXML.Excel;
+using System.IO;
+using System.Configuration;
+using DocumentFormat.OpenXml.Office2010.Excel;
+
 
 namespace AKSS_Management.CMIS
 {
@@ -11,7 +20,141 @@ namespace AKSS_Management.CMIS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["ID"] != null)
+                {
+                    LblPatientID_Data.Text = Request.QueryString["ID"].ToString();
+                    txtPatientId_TextChanged(sender,e);
+                }
+                else
+                {
+                    BindOnFirstPageLoad();
+                }
 
+            }
         }
+
+        public void BindOnFirstPageLoad()
+        {
+           // BtnSave.Text = "Submit";                      
+        }
+
+        protected async void txtPatientId_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string spname = "CRUD_CMIS_CREATE_PATIENT";
+                //BtnSave.Text = "Modify";
+                SqlParameter[] parameters = {
+                    new SqlParameter("@CRUD_Action", "GET_BY_ID"),
+                    new SqlParameter("@ID", Convert.ToInt32( LblPatientID_Data.Text.Trim()))
+                };
+
+                DataTable dt = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
+
+                if (dt.Rows.Count > 0)
+                {
+                    if (dt.Rows[0]["ID"].ToString() != "")
+                    {
+                        //txtPatientId.Text = dt.Rows[0]["ID"].ToString();
+                        LblFirstName_Data.Text = dt.Rows[0]["First_Name"].ToString();
+                        LblMiddleName_Data.Text = dt.Rows[0]["Middle_Name"].ToString();
+                        LblLastName_Data.Text = dt.Rows[0]["Last_Name"].ToString();
+                        LblCountry_Code_Data.Text = dt.Rows[0]["Country_Code"].ToString();
+                        LblContactNumber_Data.Text = dt.Rows[0]["Contact_Number"].ToString();
+                        LblEmail_Data.Text = dt.Rows[0]["Email"].ToString();
+                        LblGender_Data.Text = dt.Rows[0]["Gender"].ToString();
+                        LblAge_Data.Text = dt.Rows[0]["Age"].ToString();
+                        LblBloodGroup_Data.Text = dt.Rows[0]["Blood_Group"].ToString();
+                        LblWeight_Data.Text = dt.Rows[0]["Weight"].ToString();
+                        LblHeight_Data.Text = dt.Rows[0]["Height"].ToString();
+                        LblBP_Data.Text = dt.Rows[0]["BP"].ToString();
+                        LblSymptoms_Data.Text = dt.Rows[0]["Symptoms"].ToString();
+                        LblAddress_Data.Text = dt.Rows[0]["Address"].ToString();
+                        LblNotes_Data.Text = dt.Rows[0]["Notes"].ToString();                        
+                    }
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "txtPatientId_TextChanged", "alert('Data Not Present !');", true);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        
+        protected void Btn_Edit_serverclick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (LblPatientID_Data.Text != null)
+                {
+                    Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + LblPatientID_Data.Text.Trim(),false);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        protected async void Btn_Delete_serverclick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (LblPatientID_Data.Text != null)
+                {
+                    //Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + id);
+                    try
+                    {
+                        string spname = "CRUD_CMIS_CREATE_PATIENT";
+                        SqlParameter[] parameters = {
+                        new SqlParameter("@CRUD_Action", "DELETE_BY_ID"),
+                        new SqlParameter("@ID" , Convert.ToInt32(LblPatientID_Data.Text.Trim()))
+                        };
+
+                        int i = await CommonUtility.ExecuteStoredProcedureNonQueryAsync(spname, parameters);
+
+                        if (i > 0)
+                        {
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "D1", "alert('Record Deleted Succefully !');", true);
+                            Response.Redirect("/CMIS/CMIS_Patient_List.aspx", false);
+                        }
+                        else
+                        {
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "D2", "alert('Data Not Deleted !');", true);
+                        }
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        
+        protected void Btn_Create_Appointment_serverclick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (LblPatientID_Data.Text != null)
+                {
+                    Response.Redirect("/CMIS/CMIS_Appointment.aspx?ID=" + LblPatientID_Data.Text.Trim());
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
     }
 }

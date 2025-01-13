@@ -52,6 +52,10 @@ namespace AKSS_Management.CMIS
                 {
                     gv.DataSource = dt;
                     gv.DataBind();
+
+                    gv.UseAccessibleHeader = true;
+                    gv.HeaderRow.TableSection = TableRowSection.TableHeader;
+
                 }
                 else
                 {
@@ -80,7 +84,7 @@ namespace AKSS_Management.CMIS
 
         protected async void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "Select")
+            if (e.CommandName == "Select" || e.CommandName == "GvBtn_View")
             {
                 int rowIndex = Convert.ToInt32(e.CommandArgument);
                 int? id = Convert.ToInt32(gv.DataKeys[rowIndex].Value);
@@ -88,7 +92,7 @@ namespace AKSS_Management.CMIS
 
                 if (id != null)
                 {
-                    Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + id,false);
+                    Response.Redirect("/CMIS/CMIS_Patient_Details.aspx?ID=" + id,false);
                 }
 
                 // Delete the row from the database
@@ -191,8 +195,43 @@ namespace AKSS_Management.CMIS
             //required to avoid the runtime error "
             //Control 'GridView1' of type 'GridView' must be placed inside a form tag with runat=server."
         }
+       
 
+        protected async void Txt_GV_Custom_Search_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string spname = "CRUD_CMIS_CREATE_PATIENT";
+                SqlParameter[] parameters = {
+                    new SqlParameter("@CRUD_Action", "Txt_GV_Custom_Search"),
+                    new SqlParameter("@Txt_GV_Custom_Search",  Txt_GV_Custom_Search.Text.Trim())
+                };
+                DataTable dt = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
 
+                if (dt.Rows.Count > 0)
+                {
+                    if (dt.Rows[0]["ID"].ToString() != "")
+                    {
+                        gv.DataSource = dt;
+                        gv.DataBind();
+
+                        gv.UseAccessibleHeader = true;
+                        gv.HeaderRow.TableSection = TableRowSection.TableHeader;
+
+                        //txtClientName.Text = dt.Rows[0]["Client_Name"].ToString();
+                        //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "txtClientName_TextChanged", "alert('Same Client Name Is Already Exists !');", true);
+                    }
+                }
+                else
+                {
+                    // ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "txtClientId_TextChanged", "alert('Data Not Present !');", true);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
 
 

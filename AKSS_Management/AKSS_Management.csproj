@@ -454,6 +454,7 @@
     <Content Include="CMIS\CMIS_Medicine_Details.aspx" />
     <Content Include="CMIS\CMIS_Patient_Details.aspx" />
     <Content Include="CMIS\CMIS_Patient_List.aspx" />
+    <Content Include="CMIS\CMIS_Patient_Lists.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DefaultAKSS.aspx" />
     <Content Include="DefaultCMIS.aspx" />
@@ -1043,6 +1044,13 @@
     </Compile>
     <Compile Include="CMIS\CMIS_Patient_List.aspx.designer.cs">
       <DependentUpon>CMIS_Patient_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Patient_Lists.aspx.cs">
+      <DependentUpon>CMIS_Patient_Lists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Patient_Lists.aspx.designer.cs">
+      <DependentUpon>CMIS_Patient_Lists.aspx</DependentUpon>
     </Compile>
     <Compile Include="CommonLogicHelper.cs" />
     <Compile Include="CommonUtility.cs" />

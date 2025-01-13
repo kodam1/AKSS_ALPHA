@@ -9,6 +9,10 @@
           width:20px;
           height:20px
       }
+      .datatable-search
+      {
+          display:none;
+      }
   </style>
 
     <script type="text/javascript">
@@ -120,13 +124,37 @@
          <div class="row">
              <div class="col-lg-12">
                  <div class="card-body">
-                     <h5 class="card-title">Patient List</h5>
+                     <h5 class="card-title">Patient List</h5>                   
+                        <div class="row g-3 ">
+                            <div class="col-lg-12" style="display:none;">
+                              
+                                <asp:TextBox id="Txt_GV_Custom_Search1" runat="server" Font-Bold="true" Text="" 
+                                    Title="Search" AutoPostBack="true" OnTextChanged="Txt_GV_Custom_Search_TextChanged" 
+                                    CssClass="form-control-lg bi bi-search" Width="100%" Phaceholder="Search here..." Wrap="true"
+                                    ToolTip="Search here...."
+                                    >
+                                </asp:TextBox>
+                            </div>
+                            <div class="col-md-12 mb-3 d-flex align-items-center" >
+                                
+                               <a style="cursor:pointer;"> <i class="bx bx-search-alt me-1"
+                                    style=" border-radius: 5px; font-weight: 100;font-size: x-large; 
+                                    padding-left: 10px;"> </i></a>
+                                   
+                               
+                                <asp:TextBox ID="Txt_GV_Custom_Search" runat="server" BorderColor="Black" class="form-control"
+                                    ToolTip="Search here..." Placeholder="Patient Search ..."
+                                    TextMode="SingleLine" Width="100%" AutoPostBack="true" OnPreRender="Txt_GV_Custom_Search_TextChanged">
+                                </asp:TextBox>                                    
+                            
 
+                            </div>
+                        </div>                    
                      <asp:GridView ID="gv" runat="server" AutoGenerateColumns="false"
                          DataKeyNames="ID"
                          ShowHeader="true"
                          CssClass="table datatable"
-                         SortExpression="Id"
+                         SortExpression="ID"
                          AllowSorting="true"
                          OnRowCommand="GridView1_RowCommand"
                          OnRowCreated="GridView1_RowCreated"
@@ -169,6 +197,16 @@
                                                      <asp:Label ID="LblContactNumber" runat="server" Text='<%# Bind("Contact_Number") %>' Font-Bold="false"></asp:Label>
 
                                                     <span style="float: right;">
+                                                        
+                                                        <i class="icon bi bi-eye me-1 m-1"
+                                                            style="background-color: #0d6efd; border-radius: 5px; margin-left: -15px; color: #ffffff; font-weight: 100; 
+                                                                padding-top: 10px !important;padding-left: 10px !important;padding-bottom: 15px !important;">        
+                                                            <asp:Button ID="GvBtn_View" runat="server" Text="View" CssClass="btn btn-primary  m-1"
+                                                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"                                                                                                                                
+                                                                OnclientClick="return confirm('Are you sure you want to View this user?');"
+                                                                CommandName="GvBtn_View" style="font-family: arial;"
+                                                                CommandArgument="<%# Container.DataItemIndex %>"/>
+                                                        </i>
 
                                                         <i class="bx bxs-edit me-1 m-1"
                                                             style="background-color: #0d6efd; border-radius: 5px; margin-left: -15px; color: #ffffff; font-weight: 100; 
@@ -180,7 +218,8 @@
                                                                 CommandArgument="<%# Container.DataItemIndex %>"/>
                                                         </i>
 
-                                                        <%--OnClientClick="showModal('Edit Record','Are you sure you want to edit this record ?','')"--%>
+                                                        <%--OnClientClick="showModal('Edit Record','Are you sure you want to edit this record ?','')"
+                                                              OnclientClick="return confirm('Are you sure you want to edit this user?');" --%>
 
                                                         <i class="bx bxs-trash-alt me-1 m-1"
                                                             style="background-color: #dc3545; border-radius: 5px; margin-left: -15px; color: #ffffff; font-weight: 100; 

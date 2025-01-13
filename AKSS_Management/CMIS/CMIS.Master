@@ -342,7 +342,12 @@
            <a href="/CMIS/CMIS_Appointment_Details.aspx">
              <i class="bi bi-circle"></i><span>Appointment Details</span>
            </a>
-         </li>   
+         </li>  
+         <li style="display:none;">
+           <a href="/CMIS/CMIS_Patient_Lists.aspx">
+             <i class="bi bi-circle"></i><span>Patient Lists New</span>
+           </a>
+         </li>             
          <li>
            <a href="/CMIS/CMIS_Patient_List.aspx">
              <i class="bi bi-circle"></i><span>Patient List</span>
@@ -682,7 +687,7 @@
   <!-- Vendor JS Files -->
 
  <!-- Custom JS File -->
- <script src="./../assets/js/Custom.js"></script>
+ <%--<script src="./../assets/js/Custom.js"></script>--%>
 
   <script src="./../assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="./../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -143,7 +143,7 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" >
-                     <a href="/CMIS/CMIS_Patient_Details.aspx" target="_blank">  <i class="bi bi-person-plus"></i></a>
+                     <a href="/CMIS/CMIS_Patient_List.aspx" target="_blank">  <i class="bi bi-person-plus"></i></a>
                     </div>
                     <div class="ps-3">
                       <h6>1244</h6>
