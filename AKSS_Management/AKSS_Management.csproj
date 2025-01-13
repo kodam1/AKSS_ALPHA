@@ -127,6 +127,7 @@
     <Content Include="AKodam_Management\AKSS_Code.aspx" />
     <Content Include="AKodam_Management\AKSS_Component_GV_sorting_filter_pagenation_select.aspx" />
     <Content Include="AKodam_Management\AKSS_Component_Icon_Button.aspx" />
+    <Content Include="AKodam_Management\AKSS_Component_Reusable_Confirm_Popup_Modal.aspx" />
     <Content Include="AKodam_Management\ClientFollowUpMaster.aspx" />
     <Content Include="AKodam_Management\ClientFollowUpMasterList.aspx" />
     <Content Include="AKodam_Management\EmpDemo.aspx" />
@@ -867,6 +868,13 @@
     </Compile>
     <Compile Include="AKodam_Management\AKSS_Component_Icon_Button.aspx.designer.cs">
       <DependentUpon>AKSS_Component_Icon_Button.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_Component_Reusable_Confirm_Popup_Modal.aspx.cs">
+      <DependentUpon>AKSS_Component_Reusable_Confirm_Popup_Modal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_Component_Reusable_Confirm_Popup_Modal.aspx.designer.cs">
+      <DependentUpon>AKSS_Component_Reusable_Confirm_Popup_Modal.aspx</DependentUpon>
     </Compile>
     <Compile Include="AKodam_Management\AKSS_Management.Master.cs">
       <DependentUpon>AKSS_Management.Master</DependentUpon>
