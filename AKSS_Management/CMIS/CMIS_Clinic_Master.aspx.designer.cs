@@ -195,12 +195,12 @@ namespace AKSS_Management.CMIS
         protected global::System.Web.UI.WebControls.Panel PnlGV;
 
         /// <summary>
-        /// gvClientFollowUpMaster control.
+        /// gv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvClientFollowUpMaster;
+        protected global::System.Web.UI.WebControls.GridView gv;
     }
 }

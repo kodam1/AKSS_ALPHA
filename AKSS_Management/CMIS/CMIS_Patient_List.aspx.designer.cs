@@ -78,6 +78,15 @@ namespace AKSS_Management.CMIS
         protected global::System.Web.UI.WebControls.Panel PnlGV;
 
         /// <summary>
+        /// A1_BtnAddPatient control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1_BtnAddPatient;
+
+        /// <summary>
         /// Txt_GV_Custom_Search1 control.
         /// </summary>
         /// <remarks>

@@ -35,6 +35,7 @@ namespace AKSS_Management.CMIS
         public void BindOnFirstPageLoad()
         {
             BtnSave.Text = "Submit";
+            Lblh5_Title.Text = "Create Patient";
             GetMaxId();
             //Bind_gvClientFollowUpMaster();
         }
@@ -74,6 +75,7 @@ namespace AKSS_Management.CMIS
             {
                 string spname = "CRUD_CMIS_CREATE_PATIENT";
                 BtnSave.Text = "Modify";
+                Lblh5_Title.Text = "Modify Patient";
                 SqlParameter[] parameters = {
                     new SqlParameter("@CRUD_Action", "GET_BY_ID"),
                     new SqlParameter("@ID", Convert.ToInt32( txtPatientId.Text.Trim()))
@@ -115,10 +117,13 @@ namespace AKSS_Management.CMIS
                         //    ChkActive.Checked = false;
                         //}
 
+                        //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "txtPatientId_TextChanged", "alert('Data fetch successfully !');", true);
+
                     }
                 }
                 else
                 {
+                    BtnReset_Click(sender, e);
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "txtPatientId_TextChanged", "alert('Data Not Present !');", true);
                 }
             }

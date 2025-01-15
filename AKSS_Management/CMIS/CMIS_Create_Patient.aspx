@@ -30,22 +30,37 @@
     <section class="section">
 
      <asp:Panel ID="Panel1" runat="server" class="card"  >
-         <div class="pagetitle my-3 mx-3">
-             <h1>Patient</h1>
+
+         <div class="pagetitle my-3 mx-3 ">             
+                 <h1><a id="A1_BtnBackPatient_List" runat="server" class="m-1" href="/CMIS/CMIS_Patient_List.aspx"
+                     data-bs-toggle="tooltip" data-bs-placement="bottom" title="Back To Patient List">
+                     <i class="ri-arrow-left-line me-1"></i>
+                 </a>Patient</h1>                              
          </div>
+
+
+
       <div class="row">
         
         <div class="col-lg-8">
  
           <div class="card ">
             <div class="card-body">
-              <h5 class="card-title">Create Patient</h5> 
+              <h5 class="card-title">                  
+                  <asp:Label ID="Lblh5_Title" runat="server" Text="Create Patient"></asp:Label>
+              </h5> 
                 
               <div class="row g-3 ">
-                  <div class="col-md-12 mb-3" style="display:block;">
+                  <div class="col-md-6 mb-3" style="display:block;">
                   <div class="form-floating">
                     <asp:TextBox id="txtPatientId" runat="server" class="form-control"  AutoPostBack="true" OnTextChanged="txtPatientId_TextChanged"  ></asp:TextBox><%----%>
                     <label for="txtPatientId">Patient Id</label>
+                  </div>
+                </div>
+                 <div class="col-md-6 mb-3" style="display:block;">
+                  <div class="form-floating">
+                    <asp:TextBox id="txtTokenNo" runat="server" class="form-control" ></asp:TextBox><%----%>
+                    <label for="txtTokenNo">Token Number</label>
                   </div>
                 </div>
                   <div class="col-md-6 mb-3">

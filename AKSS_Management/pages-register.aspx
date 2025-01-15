@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pages-register.aspx.cs" 
+﻿<%@ Page Title="Register" Async="true" Language="C#" AutoEventWireup="true" CodeBehind="pages-register.aspx.cs" 
     Inherits="AKSS_Management.pages_register" %>
  
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pages / Register - NiceAdmin Bootstrap Template</title>
+  <title>Register</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -42,7 +42,7 @@
 </head>
 
 <body>
-
+<form id="formLogin" runat="server">
   <main>
     <div class="container">
 
@@ -67,16 +67,18 @@
                     <p class="text-center small">Enter your personal details to create account</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <div class="row g-3 needs-validation" novalidate>
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Your Name</label>
-                      <input type="text" name="name" class="form-control" id="yourName" required>
+                      <label for="TxtFullName" class="form-label">Your Name</label>
+                      <%--<input type="text" name="name" class="form-control" id="yourName" required>--%>
+                        <asp:TextBox ID="TxtFullName" runat="server" Text="" class="form-control" required="true"></asp:TextBox>
                       <div class="invalid-feedback">Please, enter your name!</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">Your Email</label>
-                      <input type="email" name="email" class="form-control" id="yourEmail" required>
+                      <label for="TxtEmail" class="form-label">Your Email</label>
+                      <%--<input type="email" name="email" class="form-control" id="yourEmail" required>--%>
+                        <asp:TextBox ID="TxtEmail" runat="server" Text="" class="form-control" required="true"></asp:TextBox>
                       <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
 
@@ -84,31 +86,35 @@
                       <label for="yourUsername" class="form-label">Username</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
+                        <%--<input type="text" name="username" class="form-control" id="yourUsername" required>--%>
+                          <asp:TextBox ID="TxtUsername" runat="server" Text="" class="form-control" required="true"></asp:TextBox>
                         <div class="invalid-feedback">Please choose a username.</div>
                       </div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
+                      <%--<input type="password" name="password" class="form-control" id="yourPassword" required>--%>
+                        <asp:TextBox ID="TxtPassword" runat="server" Text="" class="form-control" required="true"></asp:TextBox>
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
 
                     <div class="col-12">
                       <div class="form-check">
-                        <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
-                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
+                        <%--<input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>--%>
+                          <asp:CheckBox ID="ChkAcceptTerms" runat="server" class="form-check-input" required="true"/>
+                        <label class="form-check-label" for="ChkAcceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
                         <div class="invalid-feedback">You must agree before submitting.</div>
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                      <%--<button class="btn btn-primary w-100" type="submit">Create Account</button>--%>
+                        <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnOnlySave_Click" class="btn btn-primary w-100"  />
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Already have an account? <a href="pages-login.aspx">Log in</a></p>
                     </div>
-                  </form>
+                  </div>
 
                 </div>
               </div>
@@ -129,7 +135,7 @@
 
     </div>
   </main><!-- End #main -->
-
+</form>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->

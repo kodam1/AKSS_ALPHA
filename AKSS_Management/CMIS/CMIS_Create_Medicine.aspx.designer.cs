@@ -24,6 +24,24 @@ namespace AKSS_Management.CMIS
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
+        /// A1_BtnBackCMIS_Medicine_List control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1_BtnBackCMIS_Medicine_List;
+
+        /// <summary>
+        /// Lblh5_Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lblh5_Title;
+
+        /// <summary>
         /// txtMedicineId control.
         /// </summary>
         /// <remarks>
@@ -121,23 +139,5 @@ namespace AKSS_Management.CMIS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnExportToExcel;
-
-        /// <summary>
-        /// PnlGV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PnlGV;
-
-        /// <summary>
-        /// gvClientFollowUpMaster control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvClientFollowUpMaster;
     }
 }

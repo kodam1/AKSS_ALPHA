@@ -120,8 +120,13 @@ namespace AKSS_Management.CMIS
 
                         if (i > 0)
                         {
-                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "D1", "alert('Record Deleted Succefully !');", true);
-                            Response.Redirect("/CMIS/CMIS_Patient_List.aspx", false);
+                            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "D1", "alert('Record Deleted Succefully !');", true);
+                            //Response.Redirect("/CMIS/CMIS_Patient_List.aspx", false);
+                            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "q1", "alert('Go Back To Patient List !');", true);
+
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Record Deleted Succefully !');window.location.href='/CMIS/CMIS_Patient_List.aspx';", true);
+                            //BindOnFirstPageLoad();
+                            ClearAll();
                         }
                         else
                         {
@@ -155,6 +160,27 @@ namespace AKSS_Management.CMIS
                 throw;
             }
         }
+
+        public void ClearAll()
+        {
+            LblPatientID_Data.Text = string.Empty;
+            LblFirstName_Data.Text = string.Empty;
+            LblMiddleName_Data.Text = string.Empty;
+            LblLastName_Data.Text = string.Empty;
+            LblCountry_Code_Data.Text = string.Empty;
+            LblContactNumber_Data.Text = string.Empty;
+            LblEmail_Data.Text = string.Empty;
+            LblGender_Data.Text = string.Empty;
+            LblAge_Data.Text = string.Empty;
+            LblBloodGroup_Data.Text = string.Empty;
+            LblWeight_Data.Text = string.Empty;
+            LblHeight_Data.Text = string.Empty;
+            LblBP_Data.Text = string.Empty;
+            LblSymptoms_Data.Text = string.Empty;
+            LblAddress_Data.Text = string.Empty;
+            LblNotes_Data.Text = string.Empty;
+        }
+
 
     }
 }

@@ -11,7 +11,7 @@ namespace AKSS_Management.CMIS
 {
 
 
-    public partial class CMIS_Medicine_Details
+    public partial class CMIS_Medicine_List
     {
 
         /// <summary>
@@ -24,147 +24,102 @@ namespace AKSS_Management.CMIS
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// A1_BtnBackCMIS_Medicine_List control.
+        /// A_Btn_Add_Medicine control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1_BtnBackCMIS_Medicine_List;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A_Btn_Add_Medicine;
 
         /// <summary>
-        /// A9 control.
+        /// BtnSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A9;
+        protected global::System.Web.UI.WebControls.Button BtnSave;
 
         /// <summary>
-        /// A18 control.
+        /// BtnPrint control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A18;
+        protected global::System.Web.UI.WebControls.Button BtnPrint;
 
         /// <summary>
-        /// A19 control.
+        /// BtnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A19;
+        protected global::System.Web.UI.WebControls.Button BtnDelete;
 
         /// <summary>
-        /// A20 control.
+        /// BtnReset control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A20;
+        protected global::System.Web.UI.WebControls.Button BtnReset;
 
         /// <summary>
-        /// A21 control.
+        /// BtnExportToExcel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A21;
+        protected global::System.Web.UI.WebControls.Button BtnExportToExcel;
 
         /// <summary>
-        /// A22 control.
+        /// PnlGV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A22;
+        protected global::System.Web.UI.WebControls.Panel PnlGV;
 
         /// <summary>
-        /// A23 control.
+        /// A1_BtnAddMedicine control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A23;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1_BtnAddMedicine;
 
         /// <summary>
-        /// A24 control.
+        /// Txt_GV_Custom_Search1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A24;
+        protected global::System.Web.UI.WebControls.TextBox Txt_GV_Custom_Search1;
 
         /// <summary>
-        /// A25 control.
+        /// Txt_GV_Custom_Search control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A25;
+        protected global::System.Web.UI.WebControls.TextBox Txt_GV_Custom_Search;
 
         /// <summary>
-        /// LblMedicineID_Data control.
+        /// gv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblMedicineID_Data;
-
-        /// <summary>
-        /// LblTitle_Data control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblTitle_Data;
-
-        /// <summary>
-        /// LblCategory_Data control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCategory_Data;
-
-        /// <summary>
-        /// LblDoseInterval_Data control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblDoseInterval_Data;
-
-        /// <summary>
-        /// LblBeforeMeal_Data control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblBeforeMeal_Data;
-
-        /// <summary>
-        /// LblDescriptions_Data control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblDescriptions_Data;
+        protected global::System.Web.UI.WebControls.GridView gv;
     }
 }

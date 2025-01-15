@@ -15,7 +15,7 @@ using DocumentFormat.OpenXml.Office2010.Excel;
 
 namespace AKSS_Management.CMIS
 {
-    public partial class CMIS_Patient_List : System.Web.UI.Page
+    public partial class CMIS_Billing_Expenses_List : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,10 +42,11 @@ namespace AKSS_Management.CMIS
         {
             try
             {
-                string spname = "CRUD_CMIS_CREATE_PATIENT";
+                string spname = "CRUD_CMIS_Create_Billing_Expenses";
                 SqlParameter[] parameters = {
                     new SqlParameter("@CRUD_Action", "GET_ALL"),
                 };
+
                 DataTable dt = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
 
                 if (dt.Rows.Count > 0)
@@ -88,48 +89,40 @@ namespace AKSS_Management.CMIS
             {
                 int rowIndex = Convert.ToInt32(e.CommandArgument);
                 int? id = Convert.ToInt32(gv.DataKeys[rowIndex].Value);
-                //Label LblId = (Label)gv.Rows[e.rowIndex].FindControl("LblId");
-
+                
                 if (id != null)
                 {
-                    Response.Redirect("/CMIS/CMIS_Patient_Details.aspx?ID=" + id,false);
-                }
-
-                // Delete the row from the database
-                // Your deletion logic here
-
-                //lblMessage.Text = "Row deleted successfully!";
-                //BindGridView(); // Refresh GridView after deletion
+                    Response.Redirect("/CMIS/CMIS_Billing_Expenses_Details.aspx?Billing_Expenses_ID=" + id, false);
+                }                 
             }
             else if (e.CommandName == "A_GvBtn_Edit" || e.CommandName == "GvBtn_Edit")
             {
                 int rowIndex = Convert.ToInt32(e.CommandArgument);
-                int? id = Convert.ToInt32(gv.DataKeys[rowIndex].Value);                
+                int? id = Convert.ToInt32(gv.DataKeys[rowIndex].Value);
                 if (id != null)
                 {
-                    Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + id, false);
-                }                
+                    Response.Redirect("/CMIS/CMIS_Create_Billing_Expenses.aspx?Billing_Expenses_ID=" + id, false);
+                }
             }
             else if (e.CommandName == "A_GvBtn_Delete" || e.CommandName == "GvBtn_Delete")
             {
                 int rowIndex = Convert.ToInt32(e.CommandArgument);
-                int? id = Convert.ToInt32(gv.DataKeys[rowIndex].Value);                
+                int? id = Convert.ToInt32(gv.DataKeys[rowIndex].Value);
                 if (id != null)
-                {
-                    //Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + id);
+                {                    
                     try
                     {
-                        string spname = "CRUD_CMIS_CREATE_PATIENT";
+                        string spname = "CRUD_CMIS_Create_Billing_Expenses";
                         SqlParameter[] parameters = {
                         new SqlParameter("@CRUD_Action", "DELETE_BY_ID"),
-                        new SqlParameter("@ID" , Convert.ToInt32(id))
+                        new SqlParameter("@Billing_Expenses_ID" , Convert.ToInt32(id))
                         };
 
                         int i = await CommonUtility.ExecuteStoredProcedureNonQueryAsync(spname, parameters);
 
                         if (i > 0)
                         {
-                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "D1", "alert('Record Deleted Succefully !');", true);                          
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "D1", "alert('Record Deleted Succefully !');", true);
                             BindOnFirstPageLoad();
                         }
                         else
@@ -141,53 +134,18 @@ namespace AKSS_Management.CMIS
                     {
                         throw;
                     }
-                }               
-            }
-            else if (e.CommandName == "A_GvBtn_Create_Appointment" || e.CommandName == "GvBtn_Create_Appointment")
-            {
-                int rowIndex = Convert.ToInt32(e.CommandArgument);
-                int? id = Convert.ToInt32(gv.DataKeys[rowIndex].Value);
-               
-                if (id != null)
-                {
-                    Response.Redirect("/CMIS/CMIS_Appointment.aspx?ID=" + id, false);
                 }
-            }
+            }          
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //GridViewRow selectedRow = GridView1.SelectedRow;
-            //if (selectedRow != null)
-            //{
-            //    lblMessage.Text = "Selected Employee: " + selectedRow.Cells[0].Text + ", " + selectedRow.Cells[1].Text;
-            //}
-
-            //GridViewRow row = gv.SelectedRow;
-            //HiddenField field = GridView1.Rows[e.RowIndex].FindControl("HiddenField1") as HiddenField;
+        {          
             HiddenField HfId = (HiddenField)gv.Rows[gv.SelectedIndex].FindControl("HfId");
 
             if (HfId.Value != null)
             {
                 Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + HfId.Value);
             }
-
-            ////Label id = (Label)gv..FindControl("LblId");
-            //Label id = (Label)gv.Rows[e.RowIndex].FindControl("LblId");
-
-            //string id = gv.SelectedRow.Cells[1].Text;
-            //string name = gv.SelectedRow.Cells[1].Text;
-            //string role = gv.SelectedRow.Cells[2].Text;
-            //string salary = gv.SelectedRow.Cells[3].Text;
-            //string message = "Row Index: " + index + "\\n id: " + id + "\\n name: " + name + "\\n role: " + role + "\\n salary" + salary;
-            // ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true);
-
-            //if (HfId.Value != null)
-            //{
-            //    Response.Redirect("/CMIS/CMIS_Create_Patient.aspx?ID=" + id);
-            //}
-
-
         }
 
         public override void VerifyRenderingInServerForm(Control control)
@@ -195,12 +153,12 @@ namespace AKSS_Management.CMIS
             //required to avoid the runtime error "
             //Control 'GridView1' of type 'GridView' must be placed inside a form tag with runat=server."
         }
-       
+
         protected async void Txt_GV_Custom_Search_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                string spname = "CRUD_CMIS_CREATE_PATIENT";
+                string spname = "CRUD_CMIS_Create_Billing_Expenses";
                 SqlParameter[] parameters = {
                     new SqlParameter("@CRUD_Action", "Txt_GV_Custom_Search"),
                     new SqlParameter("@Txt_GV_Custom_Search",  Txt_GV_Custom_Search.Text.Trim())
@@ -209,7 +167,7 @@ namespace AKSS_Management.CMIS
 
                 if (dt.Rows.Count > 0)
                 {
-                    if (dt.Rows[0]["ID"].ToString() != "")
+                    if (dt.Rows[0]["Billing_Expenses_ID"].ToString() != "")
                     {
                         gv.DataSource = dt;
                         gv.DataBind();
@@ -231,8 +189,6 @@ namespace AKSS_Management.CMIS
                 throw;
             }
         }
-
-
 
     }
 }

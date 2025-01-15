@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Sub Dashboard" Language="C#" MasterPageFile="~/CMIS/CMIS.Master" AutoEventWireup="true" 
+﻿<%@ Page  Title="Sub Dashboard" Async="true" Language="C#" MasterPageFile="~/CMIS/CMIS.Master" AutoEventWireup="true" 
     CodeBehind="CMIS_Category_Dashboard.aspx.cs" Inherits="AKSS_Management.CMIS.CMIS_Category_Dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">

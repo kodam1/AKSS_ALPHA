@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pages-login.aspx.cs" 
+﻿<%@ Page Title="Login" Async="true" Language="C#" AutoEventWireup="true" CodeBehind="pages-login.aspx.cs" 
     Inherits="AKSS_Management.pages_login" %>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pages / Login - NiceAdmin Bootstrap Template</title>
+  <title>Login</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,9 @@
 
 <body>
 
+    
   <main>
+      <form id="formLogin" runat="server">
     <div class="container">
 
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
@@ -54,7 +56,7 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="/Default.aspx" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/logo.png" alt="">
-                  <span class="d-none d-lg-block">NiceAdmin</span>
+                  <span class="d-none d-lg-block">AKSS</span>
                 </a>
               </div><!-- End Logo -->
 
@@ -67,36 +69,40 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <div class="row g-3 needs-validation" novalidate>
 
                     <div class="col-12">
-                      <label for="yourUsername" class="form-label">Username</label>
+                      <label for="TxtUsername" class="form-label">Username</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
+                        <%--<input type="text" name="username" class="form-control" id="yourUsername" required>--%>
+                          <asp:TextBox ID="TxtUsername" runat="server" class="form-control" required="true"></asp:TextBox>
                         <div class="invalid-feedback">Please enter your username.</div>
                       </div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
+                      <label for="TxtPassword" class="form-label">Password</label>
+                      <%--<input type="password" name="password" class="form-control" id="yourPassword" required>--%>
+                        <asp:TextBox ID="TxtPassword" runat="server" class="form-control" required="true"></asp:TextBox>
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
 
                     <div class="col-12">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+                        <%--<input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">--%>
+                          <asp:CheckBox ID="ChkRememerMe" runat="server" class="form-check-input" Required="true" />
                         <label class="form-check-label" for="rememberMe">Remember me</label>
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Login</button>
+                      <%--<button class="btn btn-primary w-100" type="submit">Login</button>--%>
+                        <asp:Button ID="BtnSubmit" runat="server"  class="btn btn-primary w-100" OnClick="BtnSubmit_Click"  Text="Submit"/>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Don't have account? <a href="pages-register.aspx">Create an account</a></p>
                     </div>
-                  </form>
+                  </div>
 
                 </div>
               </div>
@@ -116,6 +122,7 @@
       </section>
 
     </div>
+    </form>
   </main><!-- End #main -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

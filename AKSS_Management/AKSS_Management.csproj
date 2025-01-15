@@ -440,6 +440,7 @@
     <Content Include="CMIS\CMIS_Appointment.aspx" />
     <Content Include="CMIS\CMIS_Appointment_Details.aspx" />
     <Content Include="CMIS\CMIS_Billing_Expenses_Details.aspx" />
+    <Content Include="CMIS\CMIS_Billing_Expenses_List.aspx" />
     <Content Include="CMIS\CMIS_Category_Dashboard.aspx" />
     <Content Include="CMIS\CMIS_Clinic_Master.aspx" />
     <Content Include="CMIS\CMIS_Create_Billing_Expenses.aspx" />
@@ -451,7 +452,9 @@
     <Content Include="CMIS\CMIS_Create_Prescription.aspx" />
     <Content Include="CMIS\CMIS_Create_Prescription_Details.aspx" />
     <Content Include="CMIS\CMIS_Import_Export_Databases.aspx" />
+    <Content Include="CMIS\CMIS_Lab_Reports_List.aspx" />
     <Content Include="CMIS\CMIS_Medicine_Details.aspx" />
+    <Content Include="CMIS\CMIS_Medicine_List.aspx" />
     <Content Include="CMIS\CMIS_Patient_Details.aspx" />
     <Content Include="CMIS\CMIS_Patient_List.aspx" />
     <Content Include="CMIS\CMIS_Patient_Lists.aspx" />
@@ -948,6 +951,13 @@
     <Compile Include="CMIS\CMIS_Billing_Expenses_Details.aspx.designer.cs">
       <DependentUpon>CMIS_Billing_Expenses_Details.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CMIS\CMIS_Billing_Expenses_List.aspx.cs">
+      <DependentUpon>CMIS_Billing_Expenses_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Billing_Expenses_List.aspx.designer.cs">
+      <DependentUpon>CMIS_Billing_Expenses_List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CMIS\CMIS_Category_Dashboard.aspx.cs">
       <DependentUpon>CMIS_Category_Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1025,12 +1035,26 @@
     <Compile Include="CMIS\CMIS_Import_Export_Databases.aspx.designer.cs">
       <DependentUpon>CMIS_Import_Export_Databases.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CMIS\CMIS_Lab_Reports_List.aspx.cs">
+      <DependentUpon>CMIS_Lab_Reports_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Lab_Reports_List.aspx.designer.cs">
+      <DependentUpon>CMIS_Lab_Reports_List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CMIS\CMIS_Medicine_Details.aspx.cs">
       <DependentUpon>CMIS_Medicine_Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CMIS\CMIS_Medicine_Details.aspx.designer.cs">
       <DependentUpon>CMIS_Medicine_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Medicine_List.aspx.cs">
+      <DependentUpon>CMIS_Medicine_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Medicine_List.aspx.designer.cs">
+      <DependentUpon>CMIS_Medicine_List.aspx</DependentUpon>
     </Compile>
     <Compile Include="CMIS\CMIS_Patient_Details.aspx.cs">
       <DependentUpon>CMIS_Patient_Details.aspx</DependentUpon>

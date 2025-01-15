@@ -28,17 +28,18 @@
 
     <section id="Section_Cmis1" class="section dashboard" style="display:block">
       <div class="row">
-
      
         <!-- Left side columns -->
         <div class="col-lg-12"  style="display:block">
 
-          <div class="row">
+         <div class="row">
 
+          <div class="row">
             <!-- Dashboard Card -->
             
             <div class="col-xxl-4 col-md-6">
                 
+               
               <div class="card info-card sales-card"  style="cursor: pointer;">
                   
                 <div class="filter">
@@ -53,7 +54,8 @@
                     <li><a class="dropdown-item" href="#">This Year</a></li>
                   </ul>
                 </div>
-
+                
+                  <a href="/CMIS/CMIS_Category_Dashboard.aspx" target="_blank"> 
                 <div class="card-body">
                   <h5 class="card-title">Dashboard 
                       <%--<span>| Today</span>--%>
@@ -62,7 +64,7 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                     <a href="/CMIS/CMIS_Category_Dashboard.aspx" target="_blank"> <i class="bi bi-puzzle"></i></a>
+                     <i class="bi bi-puzzle"></i>
                     </div>
                     <div class="ps-3">
                       <h6>145</h6>
@@ -70,12 +72,13 @@
 
                     </div>
                   </div>
-                </div>
-                    
+                </div>                    
+                  </a>
               </div>
+             
                  
             </div>
-           
+                         
             <!-- End Dashboard Card -->
 
             <!-- Appointments Card -->
@@ -95,15 +98,16 @@
                   </ul>
                 </div>
 
+                <a href="/CMIS/CMIS_Appointment_Details.aspx" target="_blank">
                 <div class="card-body">
-                  <h5 class="card-title">Appointments 
+                  <h5 class="card-title">Appointment & Consultations 
                       <%--<span>| This Month</span>--%>
 
                   </h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <a href="/CMIS/CMIS_Appointment_Details.aspx" target="_blank"> <i class="bi bi-person-check"></i></a>
+                      <i class="bi bi-person-check"></i>
                     </div>
                     <div class="ps-3">
                       <h6>3,264</h6>
@@ -112,7 +116,7 @@
                     </div>
                   </div>
                 </div>
-
+                 </a>
               </div>
             </div>
             <!-- End Appointments Card -->
@@ -135,6 +139,7 @@
                   </ul>
                 </div>
 
+                <a href="/CMIS/CMIS_Patient_List.aspx" target="_blank"> 
                 <div class="card-body">
                   <h5 class="card-title">Patients 
                       <%--<span>| This Year</span>--%>
@@ -143,7 +148,7 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" >
-                     <a href="/CMIS/CMIS_Patient_List.aspx" target="_blank">  <i class="bi bi-person-plus"></i></a>
+                      <i class="bi bi-person-plus"></i>
                     </div>
                     <div class="ps-3">
                       <h6>1244</h6>
@@ -151,8 +156,9 @@
 
                     </div>
                   </div>
-
+               
                 </div>
+                </a>
               </div>
 
             </div>            
@@ -179,6 +185,7 @@
                   </ul>
                 </div>
 
+                <a href="/CMIS/CMIS_Billing_Expenses_List.aspx" target="_blank">
                 <div class="card-body">
                   <h5 class="card-title">Billing/Expenses 
                       <%--<span>| Today</span>--%>
@@ -187,7 +194,7 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background-color: #f2ff0045;">
-                      <a href="/CMIS/CMIS_Billing_Expenses_Details.aspx" target="_blank"> <i class="bi bi-newspaper"></i></a>
+                       <i class="bi bi-newspaper"></i>
                     </div>
                     <div class="ps-3">
                       <h6>637</h6>
@@ -196,7 +203,7 @@
                     </div>
                   </div>
                 </div>
-
+                </a>
               </div>
             </div>
             <!-- End Billing/Expenses Card -->
@@ -218,6 +225,7 @@
                   </ul>
                 </div>
 
+                <a href="/CMIS/CMIS_Medicine_List.aspx" target="_blank">
                 <div class="card-body">
                   <h5 class="card-title">Medicines 
                       <%--<span>| This Month</span>--%>
@@ -226,7 +234,7 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background: #f5dce7;">
-                      <a href="/CMIS/CMIS_Medicine_Details.aspx" target="_blank"> <i class="bi bi-file-plus"></i></a>
+                       <i class="bi bi-file-plus"></i>
                     </div>
                     <div class="ps-3">
                       <h6>1376</h6>
@@ -235,7 +243,7 @@
                     </div>
                   </div>
                 </div>
-
+                </a>
               </div>
             </div>
             <!-- End Medicines Card -->
@@ -258,6 +266,7 @@
                   </ul>
                 </div>
 
+                <a href="/CMIS/CMIS_Create_Prescription_Details.aspx" target="_blank">
                 <div class="card-body">
                   <h5 class="card-title">Prescriptions 
                       <%--<span>| This Year</span>--%>
@@ -266,7 +275,7 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background: #e6d4ee;">
-                      <a href="/CMIS/CMIS_Create_Prescription_Details.aspx" target="_blank"> <i class="bi bi-journal-text"></i></a>
+                       <i class="bi bi-journal-text"></i>
                     </div>
                     <div class="ps-3">
                       <h6>2338</h6>
@@ -274,8 +283,9 @@
 
                     </div>
                   </div>
-
+                
                 </div>
+                </a>
               </div>
 
             </div>            
@@ -302,6 +312,7 @@
                   </ul>
                 </div>
 
+                <a href="/CMIS/CMIS_Lab_Reports_List.aspx" target="_blank"> 
                 <div class="card-body">
                   <h5 class="card-title">Lab Reports 
                       <%--<span>| Today</span>--%>
@@ -310,7 +321,7 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background: #ccd3cd;">
-                      <a href="/CMIS/CMIS_Create_Lab_Reports_Details.aspx" target="_blank"> <i class="bi bi-newspaper"></i></a>
+                      <i class="bi bi-newspaper"></i>
                     </div>
                     <div class="ps-3">
                       <h6>790</h6>
@@ -319,6 +330,8 @@
                     </div>
                   </div>
                 </div>
+                </a>
+                    
 
               </div>
             </div>
@@ -341,6 +354,7 @@
                   </ul>
                 </div>
 
+                <a href="/CMIS/CMIS_Import_Export_Databases.aspx" target="_blank">
                 <div class="card-body">
                   <h5 class="card-title">Import/Export Databases 
                       <%--<span>| This Month</span>--%>
@@ -349,7 +363,7 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background: #cfedf0;">
-                      <a href="/CMIS/CMIS_Import_Export_Databases.aspx" target="_blank"> <i class="bi bi-download"></i></a>
+                       <i class="bi bi-download"></i>
                     </div>
                     <div class="ps-3">
                       <h6>98</h6>
@@ -358,7 +372,7 @@
                     </div>
                   </div>
                 </div>
-
+                </a>
               </div>
             </div>
             <!-- End Import/Export Databases Card -->
@@ -381,6 +395,7 @@
                   </ul>
                 </div>
 
+                <a href="/CMIS/CMIS_Create_Certificates.aspx" target="_blank"> 
                 <div class="card-body">
                   <h5 class="card-title">Certificates 
                       <%--<span>| This Year</span>--%>
@@ -389,7 +404,7 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background: #e0eef0;">
-                     <a href="/CMIS/CMIS_Create_Certificates.aspx" target="_blank">  <i class="bi bi-card-checklist"></i></a>
+                      <i class="bi bi-card-checklist"></i>
                     </div>
                     <div class="ps-3">
                       <h6>101</h6>
@@ -399,6 +414,8 @@
                   </div>
 
                 </div>
+                </a>
+
               </div>
 
             </div>            
@@ -408,7 +425,8 @@
 
         </div>
         <!-- End Left side columns -->            
-
+         
+        </div>
       </div>
     </section>
 

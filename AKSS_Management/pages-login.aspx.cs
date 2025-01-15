@@ -1,9 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Threading.Tasks;
+using System.Web.Security;
+using ClosedXML.Excel;
+using System.IO;
+using System.Configuration;
 
 namespace AKSS_Management
 {
@@ -13,5 +20,41 @@ namespace AKSS_Management
         {
 
         }
+
+        protected async void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {               
+                string spname = "CRUD_UserMaster";
+                SqlParameter[] parameters = {
+                    new SqlParameter("@CRUD_Action", "CHECK_LOGIN_CREDIENTIALS"),
+                    new SqlParameter("@UserName", TxtUsername.Text.Trim()),
+                    new SqlParameter("@PasswordHash", CommonUtility.Encode(TxtPassword.Text.Trim()))
+                 };
+
+                DataTable dt = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
+
+                if (dt.Rows.Count > 0)
+                {
+                    if (dt.Rows[0]["UserId"].ToString() != "")
+                    {                        
+                       // ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "L1", "alert('Login Successfull !!');", true);
+                        // Page.ClientScript.RegisterStartupScript(this.GetType(), "L1", "alert('Login Successfull !!');", true);
+                            //  ClientScript.RegisterClientScriptBlock(this.GetType(), "a1", "alert('Login Successfull !!');",true);
+                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/Default.aspx';", true);
+                        //Response.Redirect("/Default.aspx");
+                    }
+                }
+                else
+                {
+                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "L2", "alert('Wrong Username Or Password !\\nKindly Try Again !!');", true);                    
+                }               
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
     }
 }

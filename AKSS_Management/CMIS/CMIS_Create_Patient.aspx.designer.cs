@@ -24,6 +24,24 @@ namespace AKSS_Management.CMIS
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
+        /// A1_BtnBackPatient_List control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1_BtnBackPatient_List;
+
+        /// <summary>
+        /// Lblh5_Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lblh5_Title;
+
+        /// <summary>
         /// txtPatientId control.
         /// </summary>
         /// <remarks>
@@ -31,6 +49,15 @@ namespace AKSS_Management.CMIS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPatientId;
+
+        /// <summary>
+        /// txtTokenNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTokenNo;
 
         /// <summary>
         /// txtFirstName control.
