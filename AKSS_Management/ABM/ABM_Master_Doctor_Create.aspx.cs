@@ -21,6 +21,15 @@ namespace AKSS_Management.ABM
         {
             if (!IsPostBack)
             {
+                if (!string.IsNullOrEmpty(Session["UserName"].ToString()))
+                {
+                    ViewState["Session_UserName"] = Session["UserName"].ToString();
+                }
+                else
+                {
+                    Response.Redirect("/pages_login.aspx");
+                }
+
                 if (Request.QueryString["Dr_Id"] != null)
                 {                    
                     TxtDoctorId.Text = Request.QueryString["Dr_Id"].ToString();
@@ -117,26 +126,26 @@ namespace AKSS_Management.ABM
                     if (dt.Rows[0]["Dr_Id"].ToString() != "")
                     {
                         
-                        TxtDoctorId.Text = dt.Rows[0]["Dr_Id"].ToString();
-                        DdlDivisionName.SelectedValue = dt.Rows[0]["Division_Name"].ToString();
-                        TxtDML_No.Text = dt.Rows[0]["DML_No"].ToString();
-                        DdlDML_Saturation.SelectedValue = dt.Rows[0]["DML_Saturation"].ToString();
-                        TxtDOCTOR_Name.Text = dt.Rows[0]["DOCTOR_Name"].ToString();
-                        DdlQualification.SelectedValue = dt.Rows[0]["Qualification"].ToString();
-                        DdlSpeciality.SelectedValue = dt.Rows[0]["Speciality"].ToString();
-                        DdlClass.SelectedValue = dt.Rows[0]["Class"].ToString();
-                        DdlCity.SelectedValue = dt.Rows[0]["City"].ToString();
-                        TxtAddress1.Text = dt.Rows[0]["Address1"].ToString();
-                        TxtAddress2.Text = dt.Rows[0]["Address2"].ToString();
-                        TxtAddress3.Text = dt.Rows[0]["Address3"].ToString();
-                        DdlArea.SelectedValue = dt.Rows[0]["Area"].ToString();
-                        TxtPinCode.Text = dt.Rows[0]["PinCode"].ToString();
+                        TxtDoctorId.Text = !string.IsNullOrEmpty(dt.Rows[0]["Dr_Id"].ToString()) ? dt.Rows[0]["Dr_Id"].ToString() : string.Empty; ;
+                        DdlDivisionName.SelectedValue = !string.IsNullOrEmpty(dt.Rows[0]["Division_Name"].ToString()) ? dt.Rows[0]["Division_Name"].ToString() : string.Empty; ;
+                        TxtDML_No.Text = !string.IsNullOrEmpty(dt.Rows[0]["DML_No"].ToString()) ? dt.Rows[0]["DML_No"].ToString() : string.Empty; ;
+                        DdlDML_Saturation.SelectedValue = !string.IsNullOrEmpty(dt.Rows[0]["DML_Saturation"].ToString()) ? dt.Rows[0]["DML_Saturation"].ToString() : string.Empty; ;
+                        TxtDOCTOR_Name.Text = !string.IsNullOrEmpty(dt.Rows[0]["DOCTOR_Name"].ToString()) ? dt.Rows[0]["DOCTOR_Name"].ToString() : string.Empty; ;
+                        DdlQualification.SelectedValue = !string.IsNullOrEmpty(dt.Rows[0]["Qualification"].ToString()) ? dt.Rows[0]["Qualification"].ToString() : string.Empty; ;
+                        DdlSpeciality.SelectedValue = !string.IsNullOrEmpty(dt.Rows[0]["Speciality"].ToString()) ? dt.Rows[0]["Speciality"].ToString() : string.Empty; ;
+                        DdlClass.SelectedValue = !string.IsNullOrEmpty(dt.Rows[0]["Class"].ToString()) ? dt.Rows[0]["Class"].ToString() : string.Empty; ;
+                        DdlCity.SelectedValue = !string.IsNullOrEmpty(dt.Rows[0]["City"].ToString()) ? dt.Rows[0]["City"].ToString() : string.Empty; ;
+                        TxtAddress1.Text = !string.IsNullOrEmpty(dt.Rows[0]["Address1"].ToString()) ? dt.Rows[0]["Address1"].ToString() : string.Empty; ;
+                        TxtAddress2.Text = !string.IsNullOrEmpty(dt.Rows[0]["Address2"].ToString()) ? dt.Rows[0]["Address2"].ToString() : string.Empty; ;
+                        TxtAddress3.Text = !string.IsNullOrEmpty(dt.Rows[0]["Address3"].ToString()) ? dt.Rows[0]["Address3"].ToString() : string.Empty; ;
+                        DdlArea.SelectedValue = !string.IsNullOrEmpty(dt.Rows[0]["Area"].ToString()) ? dt.Rows[0]["Area"].ToString() : string.Empty; ;
+                        TxtPinCode.Text = !string.IsNullOrEmpty(dt.Rows[0]["PinCode"].ToString()) ? dt.Rows[0]["PinCode"].ToString() : string.Empty; ;
 
                         // database like 1993-12-30
                         // get 30-12-1993 12:00:00 AM
                         //DateTime datetime = DateTime.ParseExact(dt.Rows[0]["Date_Of_Birth"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
-                        string str_date = dt.Rows[0]["Date_Of_Birth"].ToString();
+                        string str_date = !string.IsNullOrEmpty(dt.Rows[0]["Date_Of_Birth"].ToString()) ? dt.Rows[0]["Date_Of_Birth"].ToString() : string.Empty; ;
                         // Parse the string into a DateTime object
                         DateTime dateTime = DateTime.Parse(str_date);
 
@@ -158,7 +167,7 @@ namespace AKSS_Management.ABM
                         */
 
 
-                        TxtMobileNumber.Text = dt.Rows[0]["Mobile_No"].ToString();
+                        TxtMobileNumber.Text = !string.IsNullOrEmpty(dt.Rows[0]["Mobile_No"].ToString()) ? dt.Rows[0]["Mobile_No"].ToString() : string.Empty; ;
                     }
                 }
                 else
@@ -245,8 +254,8 @@ namespace AKSS_Management.ABM
             {
                 string spname = "CRUD_ABM_DoctorMaster_test";
                 string CRUD_Action = string.Empty;
-                string CreatedBy = string.Empty;
-                string ModifiedBy = string.Empty;
+                string CreatedBy = ViewState["Session_UserName"].ToString();//Session["UserName"].ToString()
+                string ModifiedBy = ViewState["Session_UserName"].ToString();
 
                 if (await ClientExist != true)
                 {
@@ -362,13 +371,13 @@ namespace AKSS_Management.ABM
             {               
                 using (XLWorkbook wb = new XLWorkbook())
                 {
-                    wb.Worksheets.Add(dt, "DoctorMaster");
+                    wb.Worksheets.Add(dt, "DoctorMasterList");
 
                     Response.Clear();
                     Response.Buffer = true;
                     Response.Charset = "";
                     Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-                    Response.AddHeader("content-disposition", "attachment;filename=DoctorMasterList.xlsx");
+                    Response.AddHeader("content-disposition", "attachment;filename=DoctorMaster.xlsx");
                     using (MemoryStream MyMemoryStream = new MemoryStream())
                     {
                         wb.SaveAs(MyMemoryStream);

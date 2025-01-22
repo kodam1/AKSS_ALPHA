@@ -22,6 +22,16 @@ namespace AKSS_Management.ABM
         {
             if (!IsPostBack)
             {
+
+                if (!string.IsNullOrEmpty(Session["UserName"].ToString()))
+                {
+                    ViewState["Session_UserName"] = Session["UserName"].ToString();
+                }
+                else
+                {
+                    Response.Redirect("/pages_login.aspx");
+                }
+
                 if (Request.QueryString["Id"] != null)
                 {
                     BindAllListControl();
@@ -449,8 +459,8 @@ namespace AKSS_Management.ABM
             {
                 string spname = "CRUD_ABM_Appointments";
                 string CRUD_Action = string.Empty;
-                string CreatedBy = "admin";//Session["UserName"].ToString()
-                string ModifiedBy = "admin";
+                string CreatedBy = ViewState["Session_UserName"].ToString();//Session["UserName"].ToString()
+                string ModifiedBy = ViewState["Session_UserName"].ToString();
 
                 if (await ClientExist != true)
                 {

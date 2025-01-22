@@ -24,22 +24,22 @@ namespace AKSS_Management.ABM
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// A1_BtnBackChemist_List control.
+        /// A1_BtnBackStockist_List control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1_BtnBackChemist_List;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1_BtnBackStockist_List;
 
         /// <summary>
-        /// TxtChemistId control.
+        /// TxtStockistId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtChemistId;
+        protected global::System.Web.UI.WebControls.TextBox TxtStockistId;
 
         /// <summary>
         /// DdlDivisionName control.
@@ -51,31 +51,31 @@ namespace AKSS_Management.ABM
         protected global::System.Web.UI.WebControls.DropDownList DdlDivisionName;
 
         /// <summary>
-        /// TxtCML_No control.
+        /// TxtSML_No control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCML_No;
+        protected global::System.Web.UI.WebControls.TextBox TxtSML_No;
 
         /// <summary>
-        /// DdlCML_Saturation control.
+        /// DdlSML_Saturation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlCML_Saturation;
+        protected global::System.Web.UI.WebControls.DropDownList DdlSML_Saturation;
 
         /// <summary>
-        /// TxtCHEMIST_Name control.
+        /// TxtSTOCKIST_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCHEMIST_Name;
+        protected global::System.Web.UI.WebControls.TextBox TxtSTOCKIST_Name;
 
         /// <summary>
         /// DdlQualification control.

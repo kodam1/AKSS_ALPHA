@@ -13,7 +13,7 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/DefaultABM.aspx">Home</a></li>
           <li class="breadcrumb-item">Master</li>
-          <li class="breadcrumb-item active">Chemist Master</li>
+          <li class="breadcrumb-item active">Stockist Master</li>
         </ol>
       </nav>
     </div>
@@ -23,10 +23,10 @@
 
      <asp:Panel ID="Panel1" runat="server" class="card"  >      
           <div class="pagetitle my-3 mx-3">
-             <h1><a id="A1_BtnBackChemist_List" runat="server" class="m-1" href="/ABM/ABM_Master_Chemist_List.aspx"
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Back To Chemist's List">
+             <h1><a id="A1_BtnBackStockist_List" runat="server" class="m-1" href="/ABM/ABM_Master_Stockist_List.aspx"
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Back To Stockist's List">
                 <i class="ri-arrow-left-line me-1"></i>
-            </a>Create Chemist Master</h1>
+            </a>Create Stockist Master</h1>
         </div>
 
       <div class="row">
@@ -35,13 +35,13 @@
  
           <div class="card ">
             <div class="card-body">
-              <h5 class="card-title">Chemist Personal Info</h5> 
+              <h5 class="card-title">Stockist Personal Info</h5> 
                 
               <div class="row g-3 ">
                   <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                    <asp:TextBox id="TxtChemistId" runat="server" class="form-control" AutoPostBack="true" OnTextChanged="TxtChemistId_TextChanged" ></asp:TextBox> 
-                    <label for="TxtChemistId">Chemist Id</label>
+                    <asp:TextBox id="TxtStockistId" runat="server" class="form-control"  TextMode="Number" AutoPostBack="true" OnTextChanged="TxtStockistId_TextChanged" ></asp:TextBox> 
+                    <label for="TxtStockistId">Stockist Id</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -57,27 +57,27 @@
              <div class="row g-3">
               <div class="col-md-6 mb-3">
                <div class="form-floating">
-                  <asp:TextBox id="TxtCML_No" runat="server" class="form-control" ></asp:TextBox>                                        
-                 <label for="TxtCML_No">CML No.</label>
+                  <asp:TextBox id="TxtSML_No" runat="server" class="form-control"  TextMode="Number" ></asp:TextBox>                                        
+                 <label for="TxtSML_No">SML No.</label>
                </div>
              </div>
                <div class="col-md-6 mb-3">
                     <div class="form-floating mb-3">
-                    <asp:DropDownList id="DdlCML_Saturation" runat="server" class="form-select"  aria-label="DdlCML_Saturation" >
+                    <asp:DropDownList id="DdlSML_Saturation" runat="server" class="form-select"  aria-label="DdlCML_Saturation" >
                        <asp:ListItem Text="Select" Value="" Selected="True"></asp:ListItem>
                        <asp:ListItem Text="Dr" Value="Dr" ></asp:ListItem>
                        <asp:ListItem Text="Mr" Value="Mr" ></asp:ListItem>
                        <asp:ListItem Text="Ms" Value="Ms" ></asp:ListItem>
                     </asp:DropDownList>
-                    <label for="DdlCML_Saturation">DML Saturation</label>
+                    <label for="DdlSML_Saturation">SML Saturation</label>
                   </div>
                </div>
              </div>
               <div class="row g-3">
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                    <asp:TextBox id="TxtCHEMIST_Name" runat="server" class="form-control"   AutoPostBack="true" OnTextChanged="TxtCHEMIST_Name_TextChanged"  ></asp:TextBox>                                        
-                    <label for="TxtCHEMIST_Name">Chemist Name</label>
+                    <asp:TextBox id="TxtSTOCKIST_Name" runat="server" class="form-control"   AutoPostBack="true" OnTextChanged="TxtSTOCKIST_Name_TextChanged"  ></asp:TextBox>                                        
+                    <label for="TxtSTOCKIST_Name">Stockist Name</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -149,15 +149,16 @@
           <div class="col-lg-6">
               <div class="card ">
                   <div class="card-body">
-                       <h5 class="card-title">Chemist Address Info</h5>  
+                       <h5 class="card-title">Stockist Address Info</h5>  
                        <div class="row g-3 ">
 
                        <div class="col-md-12 mb-3">
                            <div class="form-floating mb-3">
                            <asp:DropDownList id="DdlCity" runat="server" class="form-select"  aria-label="DdlCity" >
                              <asp:ListItem Value="Select" Text="" selected="True"></asp:ListItem>
+                               <asp:ListItem Value="BENGALURU" Text="BENGALURU"></asp:ListItem>
                              <asp:ListItem Value="MUMBAI" Text="MUMBAI"></asp:ListItem>
-                             <%--<asp:ListItem value="MUMBAI-ANDHERI"  Text="MUMBAI-ANDHERI" ></asp:ListItem>--%>                             
+                             <asp:ListItem value="MUMBAI-ANDHERI"  Text="MUMBAI-ANDHERI" ></asp:ListItem>                             
                            </asp:DropDownList>
                            <label for="DdlCity">City</label>
                          </div>
@@ -194,7 +195,7 @@
              <div class="col-lg-6">
              <div class="card ">
            <div class="card-body">
-                <h5 class="card-title">Chemist Contact Info</h5>  
+                <h5 class="card-title">Stockist Contact Info</h5>  
                 <div class="row g-3 ">
                   <div class="col-md-6 mb-3">
                     <div class="form-floating mb-3">
@@ -216,7 +217,7 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                     <asp:TextBox id="TxtPinCode" runat="server" class="form-control" ></asp:TextBox>                    
+                     <asp:TextBox id="TxtPinCode" runat="server" class="form-control"  TextMode="Number" ></asp:TextBox>                    
                     <label for="TxtPinCode">PinCode</label>
                   </div>
                 </div>               
@@ -230,7 +231,7 @@
              </div>
                <div class="col-md-6 mb-3">
                  <div class="form-floating">
-                    <asp:TextBox id="TxtMobileNumber" runat="server" class="form-control" ></asp:TextBox>                                          
+                    <asp:TextBox id="TxtMobileNumber" runat="server" class="form-control"  TextMode="Number" ></asp:TextBox>                                          
                    <label for="TxtMobileNumber">Mobile Number</label>
                  </div>
                </div>
@@ -279,15 +280,15 @@
                      <h5 class="card-title">Chemist Master List</h5>
 
                      <asp:GridView ID="gv" runat="server" AutoGenerateColumns="false" 
-                                    CssClass="table datatable" DataKeyNames="Chemist_Id"
+                                    CssClass="table datatable" DataKeyNames="Stockist_Id"
                                     ShowHeader="true"
                                     >
                          <Columns>
-                                <asp:BoundField DataField="Chemist_Id" HeaderText="Chemist Id" />
+                                <asp:BoundField DataField="Stockist_Id" HeaderText="Stockist Id" />
                                 <asp:BoundField DataField="Division_Name" HeaderText="Division Name" />
-                                <asp:BoundField DataField="CML_No" HeaderText="CML No" />
-                                <asp:BoundField DataField="CML_Saturation" HeaderText="CML Saturation" />
-                                <asp:BoundField DataField="CHEMIST_Name" HeaderText="Chemist Name" />
+                                <asp:BoundField DataField="SML_No" HeaderText="SML No" />
+                                <asp:BoundField DataField="SML_Saturation" HeaderText="SML Saturation" />
+                                <asp:BoundField DataField="STOCKIST_Name" HeaderText="Stockist Name" />
                                 <asp:BoundField DataField="Qualification" HeaderText="Qualification" />
                                 <asp:BoundField DataField="Owner_Contact_Person" HeaderText="Owner Contact Person" />
                                 <asp:BoundField DataField="Class" HeaderText="Class" />

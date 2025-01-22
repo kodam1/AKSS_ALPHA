@@ -11,70 +11,52 @@ namespace AKSS_Management.ABM
 {
 
 
-    public partial class ABM
+    public partial class ABM_Category_Dashboard
     {
 
         /// <summary>
-        /// head control.
+        /// LblAppointments_Id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label LblAppointments_Id;
 
         /// <summary>
-        /// form1 control.
+        /// lblDoctorMaster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblDoctorMaster;
 
         /// <summary>
-        /// ScriptManager1 control.
+        /// lblChemistMaster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.Label lblChemistMaster;
 
         /// <summary>
-        /// span_Profile_UserName control.
+        /// lblStockistMaster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl span_Profile_UserName;
+        protected global::System.Web.UI.WebControls.Label lblStockistMaster;
 
         /// <summary>
-        /// h6_Profile_FullName control.
+        /// lblBilling_Expenses control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl h6_Profile_FullName;
-
-        /// <summary>
-        /// span_Profile_Role control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl span_Profile_Role;
-
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Label lblBilling_Expenses;
     }
 }

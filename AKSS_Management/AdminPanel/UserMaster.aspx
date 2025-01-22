@@ -77,8 +77,9 @@
                     <div class="form-floating mb-3">
                     <asp:DropDownList id="ddlRole" runat="server" class="form-select"  aria-label="State" >
                       <asp:ListItem Value="Select" Text="Select" selected="True">Select</asp:ListItem>
-                      <asp:ListItem value="Admin"  Text="Admin" >Admin</asp:ListItem>
-                      <asp:ListItem value="User"  Text="User" >User</asp:ListItem>
+                      <asp:ListItem value="Admin"  Text="Admin" ></asp:ListItem>
+                      <asp:ListItem value="ABM"  Text="ABM" ></asp:ListItem>
+                      <asp:ListItem value="User"  Text="User" ></asp:ListItem>
                     </asp:DropDownList>
                     <label for="ddlRole">Role</label>
                   </div>

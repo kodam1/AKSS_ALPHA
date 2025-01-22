@@ -37,11 +37,30 @@ namespace AKSS_Management
                 if (dt.Rows.Count > 0)
                 {
                     if (dt.Rows[0]["UserId"].ToString() != "")
-                    {                        
-                       // ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "L1", "alert('Login Successfull !!');", true);
+                    {
+                        // ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "L1", "alert('Login Successfull !!');", true);
                         // Page.ClientScript.RegisterStartupScript(this.GetType(), "L1", "alert('Login Successfull !!');", true);
-                            //  ClientScript.RegisterClientScriptBlock(this.GetType(), "a1", "alert('Login Successfull !!');",true);
-                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/Default.aspx';", true);
+                        //  ClientScript.RegisterClientScriptBlock(this.GetType(), "a1", "alert('Login Successfull !!');",true);
+
+                        Session["UserName"] = !string.IsNullOrEmpty(dt.Rows[0]["UserName"].ToString()) ? dt.Rows[0]["UserName"].ToString() : string.Empty;
+
+                        if (dt.Rows[0]["Role"].ToString() != "" && dt.Rows[0]["Role"].ToString() == "Admin")
+                        {
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/Default.aspx';", true);
+                        }
+                        else if (dt.Rows[0]["Role"].ToString() != "" && dt.Rows[0]["Role"].ToString() == "ABM")
+                        {
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/DefaultABM.aspx';", true);
+                        }
+                        else if (dt.Rows[0]["Role"].ToString() != "" && dt.Rows[0]["Role"].ToString() == "User")
+                        {
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/DefaultCMIS.aspx';", true);
+                        }                                 
+                        else
+                        {
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/Default.aspx';", true);
+                        }
+
                         //Response.Redirect("/Default.aspx");
                     }
                 }

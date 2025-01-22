@@ -21,6 +21,15 @@ namespace AKSS_Management.ABM
         {
             if (!IsPostBack)
             {
+                if (!string.IsNullOrEmpty(Session["UserName"].ToString()))
+                {
+                    ViewState["Session_UserName"] = Session["UserName"].ToString();
+                }
+                else
+                {
+                    Response.Redirect("/pages_login.aspx");
+                }
+
                 if (Request.QueryString["Chemist_Id"] != null)
                 {                    
                     TxtChemistId.Text = Request.QueryString["Chemist_Id"].ToString();
@@ -130,21 +139,21 @@ namespace AKSS_Management.ABM
                         DdlArea.SelectedValue = dt.Rows[0]["Area"].ToString() != null ? dt.Rows[0]["Area"].ToString() : "";
                         TxtPinCode.Text = dt.Rows[0]["PinCode"].ToString() != null ? dt.Rows[0]["PinCode"].ToString() : "";
 
-                        TxtDate_Of_Birth.Text = dt.Rows[0]["Date_Of_Birth"].ToString() != null ? dt.Rows[0]["Date_Of_Birth"].ToString() : "";
+                        //  TxtDate_Of_Birth.Text = dt.Rows[0]["Date_Of_Birth"].ToString() != null ? dt.Rows[0]["Date_Of_Birth"].ToString() : "";
 
-                        //if (dt.Rows[0]["Date_Of_Birth"].ToString() != null)
-                        //{
-                        //    string str_date = dt.Rows[0]["Date_Of_Birth"].ToString();
-                        //    DateTime dateTime = DateTime.Parse(str_date);
+                        if (dt.Rows[0]["Date_Of_Birth"].ToString() != null)
+                        {
+                            string str_date = dt.Rows[0]["Date_Of_Birth"].ToString();
+                            DateTime dateTime = DateTime.Parse(str_date);
 
-                        //    string shortDate = dateTime.ToString("yyyy-MM-dd"); // Default culture short date format
+                            string shortDate = dateTime.ToString("yyyy-MM-dd"); // Default culture short date format
 
-                        //    TxtDate_Of_Birth.Text = shortDate;
-                        //}
-                        //else
-                        //{
-                        //    TxtDate_Of_Birth.Text = "";
-                        //}
+                            TxtDate_Of_Birth.Text = shortDate;
+                        }
+                        else
+                        {
+                            TxtDate_Of_Birth.Text = string.Empty;
+                        }
 
                         TxtMobileNumber.Text = dt.Rows[0]["Mobile_No"].ToString() != null ? dt.Rows[0]["Mobile_No"].ToString() : "";
                         TxtContact_Person.Text = dt.Rows[0]["Contact_Person"].ToString() != null ? dt.Rows[0]["Contact_Person"].ToString() : "";
@@ -234,8 +243,8 @@ namespace AKSS_Management.ABM
             {
                 string spname = "CRUD_ABM_ChemistMaster_test";
                 string CRUD_Action = string.Empty;
-                string CreatedBy = string.Empty;
-                string ModifiedBy = string.Empty;
+                string CreatedBy = ViewState["Session_UserName"].ToString();//Session["UserName"].ToString()
+                string ModifiedBy = ViewState["Session_UserName"].ToString();
 
                 if (await ClientExist != true)
                 {
@@ -350,13 +359,13 @@ namespace AKSS_Management.ABM
             {                 
                 using (XLWorkbook wb = new XLWorkbook())
                 {
-                    wb.Worksheets.Add(dt, "ChemistMaster");
+                    wb.Worksheets.Add(dt, "ChemistMasterList");
 
                     Response.Clear();
                     Response.Buffer = true;
                     Response.Charset = "";
                     Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-                    Response.AddHeader("content-disposition", "attachment;filename=ChemistMasterList.xlsx");
+                    Response.AddHeader("content-disposition", "attachment;filename=ChemistMaster.xlsx");
                     using (MemoryStream MyMemoryStream = new MemoryStream())
                     {
                         wb.SaveAs(MyMemoryStream);

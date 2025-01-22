@@ -41,7 +41,7 @@
               <div class="row g-3 ">
                   <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                    <asp:TextBox id="TxtChemistId" runat="server" class="form-control" AutoPostBack="true" OnTextChanged="TxtChemistId_TextChanged" ></asp:TextBox> 
+                    <asp:TextBox id="TxtChemistId" runat="server" class="form-control" TextMode="Number"  AutoPostBack="true" OnTextChanged="TxtChemistId_TextChanged" ></asp:TextBox> 
                     <label for="TxtChemistId">Chemist Id</label>
                   </div>
                 </div>
@@ -58,7 +58,7 @@
              <div class="row g-3">
               <div class="col-md-6 mb-3">
                <div class="form-floating">
-                  <asp:TextBox id="TxtCML_No" runat="server" class="form-control" ></asp:TextBox>                                        
+                  <asp:TextBox id="TxtCML_No" runat="server" class="form-control"  TextMode="Number" ></asp:TextBox>                                        
                  <label for="TxtCML_No">CML No.</label>
                </div>
              </div>
@@ -217,7 +217,7 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                     <asp:TextBox id="TxtPinCode" runat="server" class="form-control" ></asp:TextBox>                    
+                     <asp:TextBox id="TxtPinCode" runat="server" class="form-control"  TextMode="Number" ></asp:TextBox>                    
                     <label for="TxtPinCode">PinCode</label>
                   </div>
                 </div>               
@@ -231,7 +231,7 @@
              </div>
                <div class="col-md-6 mb-3">
                  <div class="form-floating">
-                    <asp:TextBox id="TxtMobileNumber" runat="server" class="form-control" ></asp:TextBox>                                          
+                    <asp:TextBox id="TxtMobileNumber" runat="server" class="form-control"  TextMode="Number" ></asp:TextBox>                                          
                    <label for="TxtMobileNumber">Mobile Number</label>
                  </div>
                </div>

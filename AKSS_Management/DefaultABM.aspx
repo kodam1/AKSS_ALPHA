@@ -57,7 +57,7 @@
                   </ul>
                 </div>
                 
-                  <a href="/CMIS/CMIS_Category_Dashboard.aspx" target="_blank"> 
+                  <a href="/ABM/ABM_Category_Dashboard.aspx" target="_blank"> 
                 <div class="card-body">
                   <h5 class="card-title">Dashboard 
                       <%--<span>| Today</span>--%>
@@ -231,7 +231,7 @@
                   </ul>
                 </div>
 
-                <a href="/CMIS/CMIS_Medicine_List.aspx" target="_blank">
+                <a href="/ABM/ABM_Master_Stockist_List.aspx" target="_blank">
                 <div class="card-body">
                   <h5 class="card-title">Stockist Master 
                       <%--<span>| This Month</span>--%>
