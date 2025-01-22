@@ -320,6 +320,11 @@
                     <i class="bi bi-circle"></i><span>CMIS Dashboard</span>
                 </a>
             </li>
+            <li>
+                <a href="/DefaultABM.aspx">
+                    <i class="bi bi-circle"></i><span>ABM Dashboard</span>
+                </a>
+            </li>
          <%-- <li>
             <a href="/AKodam_Management/icons-boxicons.aspx">
               <i class="bi bi-circle"></i><span>Boxicons</span>

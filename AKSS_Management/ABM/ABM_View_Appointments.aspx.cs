@@ -13,7 +13,6 @@ using System.IO;
 using System.Configuration;
 using DocumentFormat.OpenXml.Office2010.Excel;
 
-
 namespace AKSS_Management.ABM
 {
     public partial class ABM_View_Appointments : System.Web.UI.Page
@@ -22,13 +21,13 @@ namespace AKSS_Management.ABM
         {
             if (!IsPostBack)
             {
-                if (!string.IsNullOrEmpty(Session["UserName"].ToString()))
+                if (Session["UserName"] != null)
                 {
                     ViewState["Session_UserName"] = Session["UserName"].ToString();
                 }
                 else
                 {
-                    Response.Redirect("/pages_login.aspx");
+                    Response.Redirect("pages_login.aspx");
                 }
 
                 if (Request.QueryString["Id"] != null)

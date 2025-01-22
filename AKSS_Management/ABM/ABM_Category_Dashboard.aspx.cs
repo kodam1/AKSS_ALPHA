@@ -20,13 +20,13 @@ namespace AKSS_Management.ABM
         {
             if (!IsPostBack)
             {
-                if (!string.IsNullOrEmpty(Session["UserName"].ToString()))
+                if (Session["UserName"] != null)
                 {
                     ViewState["Session_UserName"] = Session["UserName"].ToString();
                 }
                 else
                 {
-                    Response.Redirect("/pages_login.aspx");
+                    Response.Redirect("/pages-login.aspx");
                 }
 
                 if (Request.QueryString["ClientId"] != null)
@@ -89,10 +89,10 @@ namespace AKSS_Management.ABM
                 else
                 {
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Bind_Data", "alert('Data Not Present !');", true);
-                    lblIncome.Text = string.Empty;
-                    lblRevenue.Text = string.Empty;
-                    lblAppointments.Text = string.Empty;
-                    lblNewPatients.Text = string.Empty;
+                    LblAppointments_Id.Text = string.Empty;
+                    lblDoctorMaster.Text = string.Empty;
+                    lblChemistMaster.Text = string.Empty;
+                    lblStockistMaster.Text = string.Empty;
                     lblBilling_Expenses.Text = string.Empty;
                 }
             }

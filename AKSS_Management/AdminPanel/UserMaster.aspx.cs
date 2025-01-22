@@ -24,6 +24,18 @@ namespace AKSS_Management.AdminPanel
         {
             if (!IsPostBack)
             {
+                if (!IsPostBack)
+                {
+                    if (Session["UserName"] != null)
+                    {
+                        ViewState["Session_UserName"] = Session["UserName"].ToString();
+                    }
+                    else
+                    {
+                        Response.Redirect("/pages-login.aspx");
+                    }
+                }
+
                 BindOnFirstPageLoad();
                 txtPassword.ToolTip = txtPassword.Text;
             }

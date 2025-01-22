@@ -477,6 +477,7 @@
     <Content Include="DefaultABM.aspx" />
     <Content Include="DefaultAKSS.aspx" />
     <Content Include="DefaultCMIS.aspx" />
+    <Content Include="E_D.aspx" />
     <Content Include="NiceAdminComponent\charts-apexcharts.aspx" />
     <Content Include="NiceAdminComponent\charts-chartjs.aspx" />
     <Content Include="NiceAdminComponent\charts-echarts.aspx" />
@@ -1228,6 +1229,13 @@
     </Compile>
     <Compile Include="DefaultCMIS.aspx.designer.cs">
       <DependentUpon>DefaultCMIS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="E_D.aspx.cs">
+      <DependentUpon>E_D.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="E_D.aspx.designer.cs">
+      <DependentUpon>E_D.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>

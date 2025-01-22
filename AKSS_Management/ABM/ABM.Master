@@ -230,6 +230,7 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <%--<img src="./../assets/img/akshay_img1.jpeg" alt="Profile" class="rounded-circle">--%>
+              <img src="/assets/img/patient.png" alt="Profile" class="rounded-circle">              
             <span class="d-none d-md-block dropdown-toggle ps-2"  id="span_Profile_UserName" runat="server">K. Akshay</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -293,23 +294,23 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
 
-     <li class="nav-item"  style="display:none;">
+     <li class="nav-item" >
          
         <a class="nav-link collapsed" data-bs-target="#MainDashboard" data-bs-toggle="collapse" href="/Default.aspx">
           <i class="bi bi-grid"></i><span>Dashboard</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="MainDashboard" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
+          <li  style="display:none;">
             <a href="/Default.aspx">
               <i class="bi bi-circle"></i><span>Nice Admin Dashboard</span>
             </a>
           </li>
-          <li>
+          <li  style="display:none;">
             <a href="/DefaultAKSS.aspx">
               <i class="bi bi-circle"></i><span>AKSS Dashboard</span>
             </a>
           </li>
-          <li>
+          <li  style="display:none;">
             <a href="/DefaultCMIS.aspx">
               <i class="bi bi-circle"></i><span>CMIS Dashboard</span>
             </a>
@@ -692,6 +693,8 @@
       </li>
       <!-- End Blank Page Nav -->
         </div>
+  
+        
     </ul>
 
   </aside><!-- End Sidebar-->

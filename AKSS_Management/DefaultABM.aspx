@@ -28,11 +28,11 @@
 
    <%--####################################### ABM DASHBOARD START HERE ###############################--%>
 
-    <section id="Section_Cmis1" class="section dashboard" style="display:block;height:450px">
+    <section id="Section_Cmis1" class="section dashboard" style="display:block;height:100%">
       <div class="row">
      
         <!-- Left side columns -->
-        <div class="col-lg-12"  style="display:block">
+        <div class="col-lg-12"  >
 
          <div class="row">
 
@@ -69,7 +69,7 @@
                      <i class="bi bi-puzzle"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>145</h6>
+                      <%--<h6>145</h6>--%>
                       <%--<span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
 
                     </div>
@@ -113,7 +113,7 @@
                       <i class="bi bi-person-check"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>3,264</h6>
+                      <%--<h6>3,264</h6>--%>
                       <%--<span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
 
                     </div>
@@ -156,7 +156,7 @@
                       <i class="bi bi-person-plus"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>1244</h6>
+                      <%--<h6>1244</h6>--%>
                       <%--<span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>--%>
 
                     </div>
@@ -203,7 +203,7 @@
                        <i class="bi bi-newspaper"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>637</h6>
+                      <%--<h6>637</h6>--%>
                       <%--<span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
 
                     </div>
@@ -243,7 +243,7 @@
                        <i class="bi bi-file-plus"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>1376</h6>
+                      <%--<h6>1376</h6>--%>
                       <%--<span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
 
                     </div>

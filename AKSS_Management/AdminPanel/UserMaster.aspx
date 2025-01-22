@@ -60,7 +60,7 @@
              </div>
                <div class="col-md-6 mb-3">
                  <div class="form-floating">
-                    <asp:TextBox id="txtPassword" runat="server" class="form-control" Type="password" ToolTip="true"></asp:TextBox>                                        
+                    <asp:TextBox id="txtPassword" runat="server" class="form-control" ToolTip="true"></asp:TextBox>  <%-- Type="password"--%>                                     
                       
                    <label for="txtPassword">Password</label>
                  </div>

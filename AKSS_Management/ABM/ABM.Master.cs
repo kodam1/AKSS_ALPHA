@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,15 +15,31 @@ namespace AKSS_Management.ABM
         {
             if (!IsPostBack)
             {
-                if (!string.IsNullOrEmpty(Session["UserName"].ToString()))
+                if (Session["UserName"] != null)
                 {
                     ViewState["Session_UserName"] = Session["UserName"].ToString();
                 }
                 else
                 {
-                    Response.Redirect("/pages_login.aspx");
+                    Response.Redirect("/pages-login.aspx");
                 }
+
+                BindOnFirstPageLoad();
             }
         }
+
+        public void BindOnFirstPageLoad()
+        {
+            Bind_Data();
+        }
+
+        public void Bind_Data()
+        {
+
+            h6_Profile_FullName.InnerText = Session["FullName"].ToString();
+            span_Profile_Role.InnerText = Session["Role"].ToString();
+            span_Profile_UserName.InnerText = Session["UserName"].ToString();
+        }
+
     }
 }

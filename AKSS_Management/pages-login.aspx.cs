@@ -42,7 +42,17 @@ namespace AKSS_Management
                         // Page.ClientScript.RegisterStartupScript(this.GetType(), "L1", "alert('Login Successfull !!');", true);
                         //  ClientScript.RegisterClientScriptBlock(this.GetType(), "a1", "alert('Login Successfull !!');",true);
 
+                        Session["UserId"] = !string.IsNullOrEmpty(dt.Rows[0]["UserId"].ToString()) ? dt.Rows[0]["UserId"].ToString() : string.Empty;
                         Session["UserName"] = !string.IsNullOrEmpty(dt.Rows[0]["UserName"].ToString()) ? dt.Rows[0]["UserName"].ToString() : string.Empty;
+                        Session["Email"] = !string.IsNullOrEmpty(dt.Rows[0]["Email"].ToString()) ? dt.Rows[0]["Email"].ToString() : string.Empty;
+                        Session["PasswordHash"] = !string.IsNullOrEmpty(dt.Rows[0]["PasswordHash"].ToString()) ? dt.Rows[0]["PasswordHash"].ToString() : string.Empty;
+                        Session["FullName"] = !string.IsNullOrEmpty(dt.Rows[0]["FullName"].ToString()) ? dt.Rows[0]["FullName"].ToString() : string.Empty;
+                        Session["Role"] = !string.IsNullOrEmpty(dt.Rows[0]["Role"].ToString()) ? dt.Rows[0]["Role"].ToString() : string.Empty;
+                        Session["PhoneNumber"] = !string.IsNullOrEmpty(dt.Rows[0]["PhoneNumber"].ToString()) ? dt.Rows[0]["PhoneNumber"].ToString() : string.Empty;
+                        Session["IsActive"] = !string.IsNullOrEmpty(dt.Rows[0]["IsActive"].ToString()) ? dt.Rows[0]["IsActive"].ToString() : string.Empty;
+
+                        string PasswordHash = Session["PasswordHash"].ToString();
+                        Session["Decode_PasswordHash"] = CommonUtility.Decode(PasswordHash);
 
                         if (dt.Rows[0]["Role"].ToString() != "" && dt.Rows[0]["Role"].ToString() == "Admin")
                         {

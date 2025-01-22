@@ -21,13 +21,13 @@ namespace AKSS_Management.ABM
         {
             if (!IsPostBack)
             {
-                if (!string.IsNullOrEmpty(Session["UserName"].ToString()))
+                if (Session["UserName"] != null)
                 {
                     ViewState["Session_UserName"] = Session["UserName"].ToString();
                 }
                 else
                 {
-                    Response.Redirect("/pages_login.aspx");
+                    Response.Redirect("/pages-login.aspx");
                 }
 
                 if (Request.QueryString["Stockist_Id"] != null)
