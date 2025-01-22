@@ -11,7 +11,18 @@ namespace AKSS_Management
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["UserName"] != null)
+                {
+                    ViewState["Session_UserName"] = Session["UserName"].ToString();
+                }
+                else
+                {
+                    Response.Redirect("/pages-login.aspx");
+                }
 
+            }
         }
     }
 }
