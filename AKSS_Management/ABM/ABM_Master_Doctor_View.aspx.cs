@@ -21,6 +21,15 @@ namespace AKSS_Management.ABM
         {
             if (!IsPostBack)
             {
+                if (!string.IsNullOrEmpty(Session["UserName"].ToString()))
+                {
+                    ViewState["Session_UserName"] = Session["UserName"].ToString();
+                }
+                else
+                {
+                    Response.Redirect("/pages_login.aspx");
+                }
+
                 if (Request.QueryString["Dr_Id"] != null)
                 {                    
                     LblDr_Id_Data.Text = Request.QueryString["Dr_Id"].ToString();
