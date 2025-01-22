@@ -80,8 +80,7 @@ namespace AKSS_Management
                     CreatedBy = ""; // session username
                 }
                 else
-                {
-                    return;
+                {                   
                     CRUD_Action = "UPDATE";
                     ModifiedBy = ""; // session username
                 }

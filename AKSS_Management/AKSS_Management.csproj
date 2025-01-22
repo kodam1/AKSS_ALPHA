@@ -123,11 +123,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ABM\ABM_Create_Appointments.aspx" />
+    <Content Include="ABM\ABM_List_Appointments.aspx" />
+    <Content Include="ABM\ABM_Master_Chemist_Create.aspx" />
+    <Content Include="ABM\ABM_Master_Chemist_List.aspx" />
+    <Content Include="ABM\ABM_Master_Chemist_View.aspx" />
+    <Content Include="ABM\ABM_Master_Doctor_Create.aspx" />
+    <Content Include="ABM\ABM_Master_Doctor_List.aspx" />
+    <Content Include="ABM\ABM_Master_Doctor_View.aspx" />
+    <Content Include="ABM\ABM_Master_Stockist_Create.aspx" />
+    <Content Include="ABM\ABM_Master_Stockist_List.aspx" />
+    <Content Include="ABM\ABM_Master_Stockist_View.aspx" />
+    <Content Include="ABM\ABM_View_Appointments.aspx" />
+    <Content Include="ABM\Notes\ABM_Notes.txt" />
     <Content Include="AdminPanel\UserMaster.aspx" />
     <Content Include="AKodam_Management\AKSS_Code.aspx" />
     <Content Include="AKodam_Management\AKSS_Component_GV_sorting_filter_pagenation_select.aspx" />
     <Content Include="AKodam_Management\AKSS_Component_Icon_Button.aspx" />
     <Content Include="AKodam_Management\AKSS_Component_Reusable_Confirm_Popup_Modal.aspx" />
+    <Content Include="AKodam_Management\AKSS_MultiSelectDropDownList.aspx" />
     <Content Include="AKodam_Management\ClientFollowUpMaster.aspx" />
     <Content Include="AKodam_Management\ClientFollowUpMasterList.aspx" />
     <Content Include="AKodam_Management\EmpDemo.aspx" />
@@ -459,6 +473,7 @@
     <Content Include="CMIS\CMIS_Patient_List.aspx" />
     <Content Include="CMIS\CMIS_Patient_Lists.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DefaultABM.aspx" />
     <Content Include="DefaultAKSS.aspx" />
     <Content Include="DefaultCMIS.aspx" />
     <Content Include="NiceAdminComponent\charts-apexcharts.aspx" />
@@ -846,6 +861,97 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABM\ABM.Master.cs">
+      <DependentUpon>ABM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM.Master.designer.cs">
+      <DependentUpon>ABM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_Create_Appointments.aspx.cs">
+      <DependentUpon>ABM_Create_Appointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_Create_Appointments.aspx.designer.cs">
+      <DependentUpon>ABM_Create_Appointments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_List_Appointments.aspx.cs">
+      <DependentUpon>ABM_List_Appointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_List_Appointments.aspx.designer.cs">
+      <DependentUpon>ABM_List_Appointments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Chemist_Create.aspx.cs">
+      <DependentUpon>ABM_Master_Chemist_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Chemist_Create.aspx.designer.cs">
+      <DependentUpon>ABM_Master_Chemist_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Chemist_List.aspx.cs">
+      <DependentUpon>ABM_Master_Chemist_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Chemist_List.aspx.designer.cs">
+      <DependentUpon>ABM_Master_Chemist_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Chemist_View.aspx.cs">
+      <DependentUpon>ABM_Master_Chemist_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Chemist_View.aspx.designer.cs">
+      <DependentUpon>ABM_Master_Chemist_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Doctor_Create.aspx.cs">
+      <DependentUpon>ABM_Master_Doctor_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Doctor_Create.aspx.designer.cs">
+      <DependentUpon>ABM_Master_Doctor_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Doctor_List.aspx.cs">
+      <DependentUpon>ABM_Master_Doctor_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Doctor_List.aspx.designer.cs">
+      <DependentUpon>ABM_Master_Doctor_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Doctor_View.aspx.cs">
+      <DependentUpon>ABM_Master_Doctor_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Doctor_View.aspx.designer.cs">
+      <DependentUpon>ABM_Master_Doctor_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Stockist_Create.aspx.cs">
+      <DependentUpon>ABM_Master_Stockist_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Stockist_Create.aspx.designer.cs">
+      <DependentUpon>ABM_Master_Stockist_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Stockist_List.aspx.cs">
+      <DependentUpon>ABM_Master_Stockist_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Stockist_List.aspx.designer.cs">
+      <DependentUpon>ABM_Master_Stockist_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Stockist_View.aspx.cs">
+      <DependentUpon>ABM_Master_Stockist_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_Master_Stockist_View.aspx.designer.cs">
+      <DependentUpon>ABM_Master_Stockist_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM_View_Appointments.aspx.cs">
+      <DependentUpon>ABM_View_Appointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM_View_Appointments.aspx.designer.cs">
+      <DependentUpon>ABM_View_Appointments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel\UserMaster.aspx.cs">
       <DependentUpon>UserMaster.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -887,6 +993,13 @@
     </Compile>
     <Compile Include="AKodam_Management\AKSS_Management.Master.designer.cs">
       <DependentUpon>AKSS_Management.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_MultiSelectDropDownList.aspx.cs">
+      <DependentUpon>AKSS_MultiSelectDropDownList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_MultiSelectDropDownList.aspx.designer.cs">
+      <DependentUpon>AKSS_MultiSelectDropDownList.aspx</DependentUpon>
     </Compile>
     <Compile Include="AKodam_Management\ClientFollowUpMaster.aspx.cs">
       <DependentUpon>ClientFollowUpMaster.aspx</DependentUpon>
@@ -1086,6 +1199,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultABM.aspx.cs">
+      <DependentUpon>DefaultABM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultABM.aspx.designer.cs">
+      <DependentUpon>DefaultABM.aspx</DependentUpon>
     </Compile>
     <Compile Include="DefaultAKSS.aspx.cs">
       <DependentUpon>DefaultAKSS.aspx</DependentUpon>
@@ -1557,6 +1677,7 @@
     <Content Include="assets\vendor\tinymce\README.md" />
     <Content Include="AKodam_Management\AKSS_Management.Master" />
     <Content Include="CMIS\CMIS.Master" />
+    <Content Include="ABM\ABM.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
