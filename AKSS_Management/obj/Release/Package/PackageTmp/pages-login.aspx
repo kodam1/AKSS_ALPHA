@@ -84,7 +84,7 @@
                     <div class="col-12">
                       <label for="TxtPassword" class="form-label">Password</label>
                       <%--<input type="password" name="password" class="form-control" id="yourPassword" required>--%>
-                        <asp:TextBox ID="TxtPassword" runat="server" class="form-control" required="true"></asp:TextBox>
+                        <asp:TextBox ID="TxtPassword" runat="server" class="form-control" TextMode="Password" required="true"></asp:TextBox>
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
 
@@ -112,7 +112,7 @@
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Designed by <a href="#">Akshay Kodam</a>
               </div>
 
             </div>

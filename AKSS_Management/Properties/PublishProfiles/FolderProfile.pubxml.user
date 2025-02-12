@@ -5,27 +5,75 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\PublishSites\AKSS_Management</_PublishTargetUrl>
-    <History>True|2025-01-18T17:35:54.4744152Z;</History>
+    <History>True|2025-01-22T19:46:31.4515577Z;True|2025-01-23T00:36:45.3728544+05:30;True|2025-01-18T23:05:54.4744152+05:30;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
+    <File Include="ABM/ABM.Master">
+      <publishTime>01/22/2025 23:32:14</publishTime>
+    </File>
+    <File Include="ABM/ABM_Category_Dashboard.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ABM/ABM_Create_Appointments.aspx">
+      <publishTime>01/21/2025 02:53:10</publishTime>
+    </File>
+    <File Include="ABM/ABM_List_Appointments.aspx">
+      <publishTime>01/21/2025 20:10:45</publishTime>
+    </File>
+    <File Include="ABM/ABM_Master_Chemist_Create.aspx">
+      <publishTime>01/22/2025 19:05:20</publishTime>
+    </File>
+    <File Include="ABM/ABM_Master_Chemist_List.aspx">
+      <publishTime>01/21/2025 20:09:42</publishTime>
+    </File>
+    <File Include="ABM/ABM_Master_Chemist_View.aspx">
+      <publishTime>01/21/2025 20:46:42</publishTime>
+    </File>
+    <File Include="ABM/ABM_Master_Doctor_Create.aspx">
+      <publishTime>01/22/2025 19:04:19</publishTime>
+    </File>
+    <File Include="ABM/ABM_Master_Doctor_List.aspx">
+      <publishTime>01/21/2025 20:11:24</publishTime>
+    </File>
+    <File Include="ABM/ABM_Master_Doctor_View.aspx">
+      <publishTime>01/21/2025 20:11:44</publishTime>
+    </File>
+    <File Include="ABM/ABM_Master_Stockist_Create.aspx">
+      <publishTime>01/22/2025 19:06:10</publishTime>
+    </File>
+    <File Include="ABM/ABM_Master_Stockist_List.aspx">
+      <publishTime>01/22/2025 18:07:24</publishTime>
+    </File>
+    <File Include="ABM/ABM_Master_Stockist_View.aspx">
+      <publishTime>01/22/2025 18:13:31</publishTime>
+    </File>
+    <File Include="ABM/ABM_View_Appointments.aspx">
+      <publishTime>01/21/2025 20:10:56</publishTime>
+    </File>
+    <File Include="ABM/Notes/ABM_Notes.txt">
+      <publishTime>01/19/2025 17:28:48</publishTime>
+    </File>
     <File Include="AdminPanel/UserMaster.aspx">
-      <publishTime>01/05/2025 08:58:03</publishTime>
+      <publishTime>01/22/2025 20:44:17</publishTime>
     </File>
     <File Include="AKodam_Management/AKSS_Code.aspx">
-      <publishTime>01/10/2025 04:51:47</publishTime>
+      <publishTime>01/20/2025 01:11:19</publishTime>
     </File>
     <File Include="AKodam_Management/AKSS_Component_GV_sorting_filter_pagenation_select.aspx">
       <publishTime>01/12/2025 16:43:36</publishTime>
     </File>
     <File Include="AKodam_Management/AKSS_Component_Icon_Button.aspx">
-      <publishTime>01/13/2025 23:29:37</publishTime>
+      <publishTime>01/21/2025 03:26:10</publishTime>
     </File>
     <File Include="AKodam_Management/AKSS_Component_Reusable_Confirm_Popup_Modal.aspx">
       <publishTime>01/13/2025 18:39:24</publishTime>
     </File>
     <File Include="AKodam_Management/AKSS_Management.Master">
-      <publishTime>01/13/2025 14:39:55</publishTime>
+      <publishTime>01/22/2025 23:30:06</publishTime>
+    </File>
+    <File Include="AKodam_Management/AKSS_MultiSelectDropDownList.aspx">
+      <publishTime>01/20/2025 05:09:55</publishTime>
     </File>
     <File Include="AKodam_Management/ClientFollowUpMaster.aspx">
       <publishTime>01/06/2025 03:04:14</publishTime>
@@ -1273,16 +1321,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/04/2025 19:46:36</publishTime>
     </File>
     <File Include="bin/AjaxControlToolkit.dll">
-      <publishTime>05/20/2020 19:34:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/AjaxControlToolkit.HtmlEditor.Sanitizer.dll">
       <publishTime>05/20/2020 19:34:02</publishTime>
     </File>
     <File Include="bin/AKSS_Management.dll">
-      <publishTime>01/18/2025 23:05:38</publishTime>
+      <publishTime>01/23/2025 01:16:26</publishTime>
     </File>
     <File Include="bin/AKSS_Management.pdb">
-      <publishTime>01/18/2025 23:05:38</publishTime>
+      <publishTime>01/23/2025 01:16:26</publishTime>
     </File>
     <File Include="bin/AntiXssLibrary.dll">
       <publishTime>06/02/2014 15:57:14</publishTime>
@@ -1557,14 +1605,20 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Default.aspx">
       <publishTime>01/04/2025 21:55:20</publishTime>
     </File>
+    <File Include="DefaultABM.aspx">
+      <publishTime>01/22/2025 22:37:13</publishTime>
+    </File>
     <File Include="DefaultAKSS.aspx">
       <publishTime>01/05/2025 02:10:01</publishTime>
     </File>
     <File Include="DefaultCMIS.aspx">
       <publishTime>01/15/2025 00:37:52</publishTime>
     </File>
+    <File Include="E_D.aspx">
+      <publishTime>01/22/2025 22:58:20</publishTime>
+    </File>
     <File Include="Main.Master">
-      <publishTime>01/06/2025 03:30:31</publishTime>
+      <publishTime>01/22/2025 23:30:53</publishTime>
     </File>
     <File Include="NiceAdmin/assets/css/style.css">
       <publishTime>09/12/2024 13:05:54</publishTime>
@@ -2998,16 +3052,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/14/2025 00:24:41</publishTime>
     </File>
     <File Include="pages-login.aspx">
-      <publishTime>01/15/2025 04:15:18</publishTime>
+      <publishTime>01/22/2025 23:00:59</publishTime>
     </File>
     <File Include="pages-register.aspx">
-      <publishTime>01/15/2025 04:14:18</publishTime>
+      <publishTime>01/22/2025 22:56:50</publishTime>
     </File>
     <File Include="sql/akss_script.sql">
       <publishTime>01/14/2025 00:57:50</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/18/2025 23:05:42</publishTime>
+      <publishTime>01/23/2025 01:16:29</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -60,7 +60,7 @@
              </div>
                <div class="col-md-6 mb-3">
                  <div class="form-floating">
-                    <asp:TextBox id="txtPassword" runat="server" class="form-control" Type="password" ToolTip="true"></asp:TextBox>                                        
+                    <asp:TextBox id="txtPassword" runat="server" class="form-control" ToolTip="true"></asp:TextBox>  <%-- Type="password"--%>                                     
                       
                    <label for="txtPassword">Password</label>
                  </div>
@@ -77,8 +77,9 @@
                     <div class="form-floating mb-3">
                     <asp:DropDownList id="ddlRole" runat="server" class="form-select"  aria-label="State" >
                       <asp:ListItem Value="Select" Text="Select" selected="True">Select</asp:ListItem>
-                      <asp:ListItem value="Admin"  Text="Admin" >Admin</asp:ListItem>
-                      <asp:ListItem value="User"  Text="User" >User</asp:ListItem>
+                      <asp:ListItem value="Admin"  Text="Admin" ></asp:ListItem>
+                      <asp:ListItem value="ABM"  Text="ABM" ></asp:ListItem>
+                      <asp:ListItem value="User"  Text="User" ></asp:ListItem>
                     </asp:DropDownList>
                     <label for="ddlRole">Role</label>
                   </div>

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AKSS_Management.master.cs" Inherits="AKSS_Management.AKodam_Management.AKSS_Management" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ABM.master.cs" Inherits="AKSS_Management.ABM.ABM" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - AKSS Management.</title>
+    <title>Dashboard - ABM.</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -59,14 +59,14 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="/Default.aspx" class="logo d-flex align-items-center">
+      <a href="/DefaultABM.aspx" class="logo d-flex align-items-center">
         <img src="./../assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">AKodam</span>
+        <span class="d-none d-lg-block">ABM</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
-    <div class="search-bar">
+    <div class="search-bar" style="display:none;" >
       <%--<form class="search-form d-flex align-items-center" method="POST" action="#">--%>
         <div class="search-form d-flex align-items-center">
              <input type="text" name="query" placeholder="Search" title="Enter search keyword">
@@ -79,13 +79,13 @@
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
-        <li class="nav-item d-block d-lg-none">
+        <li class="nav-item d-block d-lg-none"  style="display:none;" >
           <a class="nav-link nav-icon search-bar-toggle " href="#">
             <i class="bi bi-search"></i>
           </a>
         </li><!-- End Search Icon-->
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown"  style="display:none;" >
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
@@ -160,7 +160,7 @@
 
         </li><!-- End Notification Nav -->
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown"  style="display:none;" >
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
@@ -229,16 +229,17 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="./../assets/img/akshay_img1.jpeg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Akshay</span>
+            <%--<img src="./../assets/img/akshay_img1.jpeg" alt="Profile" class="rounded-circle">--%>
+              <img src="/assets/img/patient.png" alt="Profile" class="rounded-circle">              
+            <span class="d-none d-md-block dropdown-toggle ps-2"  id="span_Profile_UserName" runat="server">K. Akshay</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Akshay Kodam</h6>
-              <span>Software Developer</span>
+              <h6  id="h6_Profile_FullName" runat="server">Akshay Kodam</h6>
+              <span id="span_Profile_Role" runat="server">Software Developer</span>
             </li>
-            <li>
+       <%--     <li>
               <hr class="dropdown-divider">
             </li>
 
@@ -267,13 +268,13 @@
                 <i class="bi bi-question-circle"></i>
                 <span>Need Help?</span>
               </a>
-            </li>
+            </li>--%>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="/pages-login.aspx">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -292,39 +293,33 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-     <%-- <li class="nav-item">
-        <a class="nav-link " href="/Default.aspx">
-          <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
-        </a>
-      </li>--%>
 
-     <li class="nav-item">
+     <li class="nav-item" >
          
         <a class="nav-link collapsed" data-bs-target="#MainDashboard" data-bs-toggle="collapse" href="/Default.aspx">
           <i class="bi bi-grid"></i><span>Dashboard</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="MainDashboard" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
+          <li  style="display:none;">
             <a href="/Default.aspx">
               <i class="bi bi-circle"></i><span>Nice Admin Dashboard</span>
             </a>
           </li>
-          <li>
+          <li  style="display:none;">
             <a href="/DefaultAKSS.aspx">
               <i class="bi bi-circle"></i><span>AKSS Dashboard</span>
             </a>
           </li>
-            <li>
-                <a href="/DefaultCMIS.aspx">
-                    <i class="bi bi-circle"></i><span>CMIS Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="/DefaultABM.aspx">
-                    <i class="bi bi-circle"></i><span>ABM Dashboard</span>
-                </a>
-            </li>
+          <li  style="display:none;">
+            <a href="/DefaultCMIS.aspx">
+              <i class="bi bi-circle"></i><span>CMIS Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/DefaultABM.aspx">
+              <i class="bi bi-circle"></i><span>ABM Dashboard</span>
+            </a>
+          </li>
          <%-- <li>
             <a href="/AKodam_Management/icons-boxicons.aspx">
               <i class="bi bi-circle"></i><span>Boxicons</span>
@@ -334,36 +329,97 @@
       </li>
       <!-- End Dashboard Nav -->
 
-      <li class="nav-item">
+      <li class="nav-item" style="display:none;" >
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Pages</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-menu-button-wide"></i><span>CMIS</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-           <a href="/AKodam_Management/ClientFollowUpMaster.aspx">
-             <i class="bi bi-circle"></i><span>Client Follow Up Master</span>
+           <a href="/CMIS/CMIS_Clinic_Master.aspx">
+             <i class="bi bi-circle"></i><span>Clinic Master</span>
            </a>
          </li>
          <li>
+           <a href="/CMIS/CMIS_Appointment.aspx">
+             <i class="bi bi-circle"></i><span>Appointment</span>
+           </a>
+         </li>
+         <li>
+           <a href="/CMIS/CMIS_Appointment_Details.aspx">
+             <i class="bi bi-circle"></i><span>Appointment Details</span>
+           </a>
+         </li>  
+         <li style="display:none;">
+           <a href="/CMIS/CMIS_Patient_Lists.aspx">
+             <i class="bi bi-circle"></i><span>Patient Lists New</span>
+           </a>
+         </li>             
+         <li>
+           <a href="/CMIS/CMIS_Patient_List.aspx">
+             <i class="bi bi-circle"></i><span>Patient List</span>
+           </a>
+         </li>            
+         <li>
+           <a href="/CMIS/CMIS_Create_Patient.aspx">
+             <i class="bi bi-circle"></i><span>Patient</span>
+           </a>
+         </li>
+         <li>
+           <a href="/CMIS/CMIS_Patient_Details.aspx">
+             <i class="bi bi-circle"></i><span>Patient Details</span>
+           </a>
+         </li>    
+         <li>
+           <a href="/CMIS/CMIS_Create_Billing_Expenses.aspx">
+             <i class="bi bi-circle"></i><span>Billing Expenses</span>
+           </a>
+         </li>
+         <li>
+           <a href="/CMIS/CMIS_Billing_Expenses_Details.aspx">
+             <i class="bi bi-circle"></i><span>Billing Expenses Details</span>
+           </a>
+         </li> 
+         <li>
+           <a href="/CMIS/CMIS_Create_Medicine.aspx">
+             <i class="bi bi-circle"></i><span>Medicine</span>
+           </a>
+         </li>
+         <li>
+           <a href="/CMIS/CMIS_Medicine_Details.aspx">
+             <i class="bi bi-circle"></i><span>Medicine Details</span>
+           </a>
+         </li> 
+         <li>
+           <a href="/CMIS/CMIS_Create_Prescription.aspx">
+             <i class="bi bi-circle"></i><span>Prescription</span>
+           </a>
+         </li>
+         <li>
+           <a href="/CMIS/CMIS_Create_Prescription_Details.aspx">
+             <i class="bi bi-circle"></i><span>Prescription Details</span>
+           </a>
+         </li>
+         <li>
+           <a href="/CMIS/CMIS_Create_Lab_Reports.aspx">
+             <i class="bi bi-circle"></i><span>Lab Reports</span>
+           </a>
+         </li>
+         <li>
+           <a href="/CMIS/CMIS_Create_Lab_Reports_Details.aspx">
+             <i class="bi bi-circle"></i><span>Lab Reports Details</span>
+           </a>
+         </li>             
+            
+     <%--    <li>
            <a href="/AKodam_Management/ClientFollowUpMasterList.aspx">
              <i class="bi bi-circle"></i><span>Client Follow Up Master List</span>
            </a>
          </li>
             <li>
                 <a href="/AKodam_Management/AKSS_Code.aspx">
-                    <i class="bi bi-circle"></i><span>ShortCut Code</span>
+                    <i class="bi bi-circle"></i><span>AKSS ShortCut Code</span>
                 </a>
-            </li>
-            <li>
-                <a href="/AKodam_Management/EmpDemo.aspx">
-                    <i class="bi bi-circle"></i><span>Emp Demo</span>
-                </a>
-            </li>
-            <li>
-                <a href="/AKodam_Management/AKSS_Send_bulk_email.aspx">
-                    <i class="bi bi-circle"></i><span>Send Bulk Email</span>
-                </a>
-            </li>
+            </li>--%>
             
           <%--  <li>
             <a href="/NiceAdminComponent/components-alerts.aspx">
@@ -437,33 +493,37 @@
           </li>--%>
         </ul>
       </li>
+      <!-- End Components Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#AKSSCustomComponent" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Custom Component</span><i class="bi bi-chevron-down ms-auto"></i>
+        <li class="nav-item" style="display:block;">
+            <a class="nav-link collapsed" data-bs-target="#ABMPanel" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-menu-button-wide"></i><span>ABM Panel</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
-            <ul id="AKSSCustomComponent" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <ul id="ABMPanel" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="/AKodam_Management/AKSS_Component_Icon_Button.aspx">
-                        <i class="bi bi-circle"></i><span>Icon Button</span>
+                    <a href="/ABM/ABM_List_Appointments.aspx">
+                        <i class="bi bi-circle"></i><span>Appointments</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/AKodam_Management/AKSS_Component_GV_sorting_filter_pagenation_select.aspx">
-                        <i class="bi bi-circle"></i><span>GV sort/filter/page/select</span>
+                    <a href="/ABM/ABM_Master_Doctor_List.aspx">
+                        <i class="bi bi-circle"></i><span>Doctor Master</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/AKodam_Management/AKSS_Component_Reusable_Confirm_Popup_Modal.aspx">
-                        <i class="bi bi-circle"></i><span>Reusable Component Confirm Popup Modal</span>
+                    <a href="/ABM/ABM_Master_Chemist_List.aspx">
+                        <i class="bi bi-circle"></i><span>Chemist Master</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/ABM/ABM_Master_Stockist_List.aspx">
+                        <i class="bi bi-circle"></i><span>Stockist Master</span>
                     </a>
                 </li>
             </ul>
         </li>
-        
-      <!-- End Components Nav -->
 
-        <li class="nav-item">
+        <li class="nav-item" style="display:none;">
             <a class="nav-link collapsed" data-bs-target="#AdminPanel" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-menu-button-wide"></i><span>Admin Panel</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
@@ -573,6 +633,8 @@
       </li>--%>
       <!-- End Icons Nav -->
 
+    <div  style="display:none;" >
+
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
@@ -630,7 +692,9 @@
         </a>
       </li>
       <!-- End Blank Page Nav -->
-
+        </div>
+  
+        
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -643,14 +707,14 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+      &reg; Registerd <strong><span>AKodam Software Solutions</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="#">JARNY Software Solutions.</a>
+      Designed by <a href="#">Akshay Kodam</a>
     </div>
   </footer><!-- End Footer -->
 
@@ -659,7 +723,7 @@
   <!-- Vendor JS Files -->
 
  <!-- Custom JS File -->
- <script src="./../assets/js/Custom.js"></script>
+ <%--<script src="./../assets/js/Custom.js"></script>--%>
 
   <script src="./../assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="./../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

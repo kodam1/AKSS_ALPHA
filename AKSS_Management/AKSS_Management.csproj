@@ -142,7 +142,9 @@
     <Content Include="AKodam_Management\AKSS_Component_GV_sorting_filter_pagenation_select.aspx" />
     <Content Include="AKodam_Management\AKSS_Component_Icon_Button.aspx" />
     <Content Include="AKodam_Management\AKSS_Component_Reusable_Confirm_Popup_Modal.aspx" />
+    <Content Include="AKodam_Management\AKSS_Email_test.aspx" />
     <Content Include="AKodam_Management\AKSS_MultiSelectDropDownList.aspx" />
+    <Content Include="AKodam_Management\AKSS_Send_bulk_email.aspx" />
     <Content Include="AKodam_Management\ClientFollowUpMaster.aspx" />
     <Content Include="AKodam_Management\ClientFollowUpMasterList.aspx" />
     <Content Include="AKodam_Management\EmpDemo.aspx" />
@@ -996,6 +998,13 @@
     <Compile Include="AKodam_Management\AKSS_Component_Reusable_Confirm_Popup_Modal.aspx.designer.cs">
       <DependentUpon>AKSS_Component_Reusable_Confirm_Popup_Modal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AKodam_Management\AKSS_Email_test.aspx.cs">
+      <DependentUpon>AKSS_Email_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_Email_test.aspx.designer.cs">
+      <DependentUpon>AKSS_Email_test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AKodam_Management\AKSS_Management.Master.cs">
       <DependentUpon>AKSS_Management.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1009,6 +1018,13 @@
     </Compile>
     <Compile Include="AKodam_Management\AKSS_MultiSelectDropDownList.aspx.designer.cs">
       <DependentUpon>AKSS_MultiSelectDropDownList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_Send_bulk_email.aspx.cs">
+      <DependentUpon>AKSS_Send_bulk_email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_Send_bulk_email.aspx.designer.cs">
+      <DependentUpon>AKSS_Send_bulk_email.aspx</DependentUpon>
     </Compile>
     <Compile Include="AKodam_Management\ClientFollowUpMaster.aspx.cs">
       <DependentUpon>ClientFollowUpMaster.aspx</DependentUpon>
@@ -1892,6 +1908,13 @@
     <Folder Include="HMIS\" />
     <Folder Include="MASTERS\" />
     <Folder Include="Reports\" />
+    <Folder Include="UploadFiles\ABM\" />
+    <Folder Include="UploadFiles\AdminPanel\" />
+    <Folder Include="UploadFiles\AKodam_Management\AKSS_Send_bulk_email\" />
+    <Folder Include="UploadFiles\CMIS\" />
+    <Folder Include="UploadFiles\HMIS\" />
+    <Folder Include="UploadFiles\MASTERS\" />
+    <Folder Include="UploadFiles\NiceAdminComponent\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />

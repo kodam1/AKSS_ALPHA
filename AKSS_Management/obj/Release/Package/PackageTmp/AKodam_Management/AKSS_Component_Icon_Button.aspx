@@ -189,6 +189,7 @@
                     <a id="A50" runat="server" class="btn btn-info m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Message"  ><i class="bx bxs-message-alt-detail me-1" style="font-size: x-large;"></i><br /><span style="font-size:medium;" >Message</span></a>
                     <a id="A51" runat="server" class="btn btn-success m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="WhatsApp" ><i class="bx bxl-whatsapp me-1" style="font-size: x-large;"></i><br /><span style="font-size:medium;" >WhatsApp</span></a>
                     <a id="A52" runat="server" class="btn btn-warning m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mail"     ><i class="bx bx-mail-send me-1" style="font-size: x-large;"></i><br /><span style="font-size:medium;" >Mail</span></a>                               
+                    <a id="A73" runat="server" class="btn btn-primary m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mail"     ><i class="bx bxs-download me-1" style="font-size: x-large;"></i><br /><span style="font-size:medium;" >Download</span></a>                               
  
                        </div>
                   </div>

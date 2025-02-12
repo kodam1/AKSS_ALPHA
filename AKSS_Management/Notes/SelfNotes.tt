@@ -114,108 +114,6 @@ https://www.telerik.com/products/aspnet-ajax/documentation/getting-started/insta
   https://www.telerik.com/products/aspnet-ajax/documentation/controls/combobox/overview
 
 
-  ###############   IMPORT / EXPORT DATABASE    #######################3
-
-  
-Import/Export Database 
-
-Import/Export Database Feature: 
-
-Our clinic management app utilizes an offline 
-database, meaning it can only be actively used on one 
-device at a time. The Import/Export feature comes in 
-handy when you switch devices and want to transfer 
-your valuable clinic data securely. 
-
-Here's how it works: 
-
-Export a database: 
-
-• Create a Backup : The app generates a complete 
-copy of your clinic data named "clinic.db". 
-
-• Secure Your Backup : We recommend you to save it 
-in a safe and secure location. Remember, this data 
-represents your entire clinic's offline information. 
-
-• Verify Everything : Use an SQLite viewer to confirm 
-all your data is present before proceeding. 
-
-Import a database: 
-• Transfer the Backup : Move the "clinic.db" file to 
-your new device. 
-
-• Import and Resume : Use the app to import the 
-backup and get back to managing your clinic instantly. 
-
-• Restart for Smoothness : For optimal performance, 
-restart the app after a successful import. 
-
-Disclaimer: 
-
-While the Import/Export feature is designed to be 
-secure and reliable, please be aware of the following: 
-
-• Data Privacy : You are solely responsible for the 
-security and privacy of your exported database. We 
-recommend storing it in a secure and encrypted 
-location. 
-
-----------------------------------------
-
-
-Import/Export Database 
-
-• verny everytrung : Use an bQLlte viewer 10 connrm 
-all your data is present before proceeding. 
-
-Import a database: 
-
-• Transfer the Backup : Move the "clinic.db" file to 
-your new device. 
-
-• Import and Resume : Use the app to import the 
-backup and get back to managing your clinic instantly. 
-
-• Restart for Smoothness : For optimal performance, 
-restart the app after a successful import. 
-
-Disclaimer: 
-
-While the Import/Export feature is designed to be 
-secure and reliable, please be aware of the following: 
-
-• Data Privacy : You are solely responsible for the 
-security and privacy of your exported database. We 
-recommend storing it in a secure and encrypted 
-location. 
-
-• Compatibility: We strive to maintain compatibility 
-between app versions, but future updates might impact 
-import functionality. Always back up before updating. 
-
-• Data Loss : We cannot guarantee against potential 
-data loss during export, import, or device transfer. 
-Always double-check your data before relying on the 
-imported database. 
-
-• Limited Support : This feature is provided as-is with 
-limited technical support. For complex migration 
-issues, we recommend consulting a data specialist. 
-
-By using the Import/Export feature, you acknowledge 
-and agree to these terms and conditions. 
-
-Export Database 
-
-
-Import Database 
-
-
-
-##############  web-app-code-samples    ###########################
-
-
 https://github.com/karenpayneoregon/web-app-code-samples/tree/master/SweetAlertExamples
 
 
@@ -228,5 +126,40 @@ https://github.com/karenpayneoregon/web-app-code-samples/tree/master/SweetAlertE
 2 ) CHECK BOX DISPLAY CONFIG
 3 ) PRINT CONFIG BASED PRINTING ALL PAGES MOUDLES
 4 ) DATABASE WISE VALIDATION
+
+######################### SEND BULK EMAIL WITH CC & BCC   ###################################
+
+https://www.c-sharpcorner.com/UploadFile/0c1bb2/sending-emails-with-bcc-and-cc-using-Asp-Net-C-Sharp/
+
+
+1. JD (Development)
+2. Profile (JARNY TEAM MEMBERS)
+3. Template Merge Website
+4. Invoice 
+5. Admin Role & User Role.
+
+
+1) AI links maintain .
+2) Lead Generation k upar karna hai. = Proiority
+3) Jarny Commission based .
+4) Hiring for Jarny all roles.
+5) 
+
+
+https://jarnysoftware.bsite.net
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
