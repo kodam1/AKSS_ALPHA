@@ -44,7 +44,8 @@
                     <div class="text-center"  >
                     
                     <a id="A44" runat="server" class="btn btn-primary m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Select" visible="true"  ><i class="bi bi-card-checklist me-1" style="font-size: x-large;"></i><br /><span style="font-size:medium;" >Select</span></a>
-                    <a id="A45" runat="server" class="btn btn-warning m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Print"  visible="true"    ><i class="bx bx-printer me-1" style="font-size: x-large;"></i><br /><span style="font-size:medium;" >Print</span></a>
+                    <%--onclick="Print();"--%>
+                    <a id="printButton" runat="server"  class="btn btn-warning m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Print"  visible="true"    ><i class="bx bx-printer me-1" style="font-size: x-large;"></i><br /><span style="font-size:medium;" >Print</span></a>
                     <a id="Btn_Edit" runat="server" class="btn btn-primary m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit" onserverclick="Btn_Edit_serverclick"    ><i class="bx bxs-edit me-1" style="font-size: x-large;"></i><br /><span style="font-size:medium;" >Edit</span></a>
                     <a id="Btn_Delete" runat="server" class="btn btn-danger m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete" onserverclick="Btn_Delete_serverclick"  ><i class="bx bxs-trash-alt me-1" style="font-size: x-large;"></i><br /><span style="font-size:medium;" >Delete</span></a>
                     <a id="Btn_Create_Appointment" runat="server" class="btn btn-warning m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Create Appointment" onserverclick="Btn_Create_Appointment_serverclick" ><i class="bx bxs-calendar-event me-1 m-1" style="font-size: x-large;"></i><br /><span style="font-size:medium;" >Appointment</span></a>
@@ -58,7 +59,7 @@
                        </div>
                   </div>
 
-                <div class="row g-3 my-3 m-3">
+                <div class="row g-3 my-3 m-3" id="DivPrint" runat="server">
                     <div class="col-lg-6">
                           <div class="row ">
       <label for="LblPatientID" class="col-sm-12 col-form-label">Patient ID</label>
@@ -168,5 +169,27 @@
     </section>
 
   </main><!-- End #main -->
+
+
+     <script>
+   // Print page functionality
+         document.getElementById('<%= printButton.ClientID %>').addEventListener('click', () => {
+             var printContents = document.getElementById('<%= DivPrint.ClientID %>').innerHTML;
+         var originalContents = document.body.innerHTML;
+         document.body.innerHTML = printContents;
+         window.print();
+         document.body.innerHTML = originalContents;
+     });
+
+         //function Print() {
+         //    var printContents = document.getElementById('DivPrint').innerHTML;
+         //    var originalContents = document.body.innerHTML;
+         //    document.body.innerHTML = printContents;
+         //    window.print();
+         //    document.body.innerHTML = originalContents;
+         //}
+ 
+     </script>
+
 
 </asp:Content>

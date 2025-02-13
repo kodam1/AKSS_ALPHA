@@ -143,6 +143,7 @@
     <Content Include="AKodam_Management\AKSS_Component_Icon_Button.aspx" />
     <Content Include="AKodam_Management\AKSS_Component_Reusable_Confirm_Popup_Modal.aspx" />
     <Content Include="AKodam_Management\AKSS_Email_test.aspx" />
+    <Content Include="AKodam_Management\AKSS_JD.aspx" />
     <Content Include="AKodam_Management\AKSS_MultiSelectDropDownList.aspx" />
     <Content Include="AKodam_Management\AKSS_Profile.aspx" />
     <Content Include="AKodam_Management\AKSS_Profile_List.aspx" />
@@ -486,7 +487,14 @@
     <Content Include="DefaultAKSS.aspx" />
     <Content Include="DefaultCMIS.aspx" />
     <Content Include="DefaultJARNY.aspx" />
+    <Content Include="INVOICE\JARNY_Invoice.aspx" />
+    <Content Include="JARNY_JD.aspx" />
     <Content Include="E_D.aspx" />
+    <Content Include="JARNY_JD_Accounts.aspx" />
+    <Content Include="JARNY_JD_DBA.aspx" />
+    <Content Include="JARNY_JD_Full_Stact_Dot_Net_Developer.aspx" />
+    <Content Include="JARNY_JD_Sales.aspx" />
+    <Content Include="JARNY_JD_UI_UX.aspx" />
     <Content Include="NiceAdminComponent\charts-apexcharts.aspx" />
     <Content Include="NiceAdminComponent\charts-chartjs.aspx" />
     <Content Include="NiceAdminComponent\charts-echarts.aspx" />
@@ -515,6 +523,15 @@
     <Content Include="NiceAdminComponent\pages-contact.aspx" />
     <Content Include="NiceAdminComponent\pages-error-404.aspx" />
     <Content Include="NiceAdminComponent\pages-faq.aspx" />
+    <Content Include="Notes\AD4.png" />
+    <Content Include="Notes\IMG-20250131-WA0003.jpg" />
+    <Content Include="Notes\IMG-20250131-WA0005.jpg" />
+    <Content Include="Notes\IMG-20250207-WA0011.jpg" />
+    <Content Include="Notes\IMG-20250211-WA0012.jpg" />
+    <Content Include="Notes\IMG-20250211-WA0020.jpg" />
+    <Content Include="Notes\Jarny_logo1.jpg" />
+    <Content Include="Notes\Jarny_logo2.jpg" />
+    <Content Include="Notes\Lead Generation list.txt" />
     <Content Include="Notes\SelfNotes.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SelfNotes.txt</LastGenOutput>
@@ -1012,6 +1029,13 @@
     <Compile Include="AKodam_Management\AKSS_Email_test.aspx.designer.cs">
       <DependentUpon>AKSS_Email_test.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AKodam_Management\AKSS_JD.aspx.cs">
+      <DependentUpon>AKSS_JD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_JD.aspx.designer.cs">
+      <DependentUpon>AKSS_JD.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AKodam_Management\AKSS_Management.Master.cs">
       <DependentUpon>AKSS_Management.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1274,6 +1298,20 @@
     <Compile Include="DefaultJARNY.aspx.designer.cs">
       <DependentUpon>DefaultJARNY.aspx</DependentUpon>
     </Compile>
+    <Compile Include="INVOICE\JARNY_Invoice.aspx.cs">
+      <DependentUpon>JARNY_Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="INVOICE\JARNY_Invoice.aspx.designer.cs">
+      <DependentUpon>JARNY_Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JARNY_JD.aspx.cs">
+      <DependentUpon>JARNY_JD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JARNY_JD.aspx.designer.cs">
+      <DependentUpon>JARNY_JD.aspx</DependentUpon>
+    </Compile>
     <Compile Include="E_D.aspx.cs">
       <DependentUpon>E_D.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1287,6 +1325,41 @@
     </Compile>
     <Compile Include="JARNY\JARNY.Master.designer.cs">
       <DependentUpon>JARNY.Master</DependentUpon>
+    </Compile>
+    <Compile Include="JARNY_JD_Accounts.aspx.cs">
+      <DependentUpon>JARNY_JD_Accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JARNY_JD_Accounts.aspx.designer.cs">
+      <DependentUpon>JARNY_JD_Accounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JARNY_JD_DBA.aspx.cs">
+      <DependentUpon>JARNY_JD_DBA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JARNY_JD_DBA.aspx.designer.cs">
+      <DependentUpon>JARNY_JD_DBA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JARNY_JD_Full_Stact_Dot_Net_Developer.aspx.cs">
+      <DependentUpon>JARNY_JD_Full_Stact_Dot_Net_Developer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JARNY_JD_Full_Stact_Dot_Net_Developer.aspx.designer.cs">
+      <DependentUpon>JARNY_JD_Full_Stact_Dot_Net_Developer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JARNY_JD_Sales.aspx.cs">
+      <DependentUpon>JARNY_JD_Sales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JARNY_JD_Sales.aspx.designer.cs">
+      <DependentUpon>JARNY_JD_Sales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JARNY_JD_UI_UX.aspx.cs">
+      <DependentUpon>JARNY_JD_UI_UX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JARNY_JD_UI_UX.aspx.designer.cs">
+      <DependentUpon>JARNY_JD_UI_UX.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -1746,6 +1819,14 @@
     <Content Include="CMIS\CMIS.Master" />
     <Content Include="ABM\ABM.Master" />
     <Content Include="JARNY\JARNY.Master" />
+    <Content Include="Notes\How to Find Clients for IT Projects.pptx" />
+    <Content Include="Notes\JARNY_AI_Tools_For_Developers.pptx" />
+    <Content Include="Notes\Niche Category IT project ideas specifically tailored for.pptx" />
+    <Content Include="Notes\Sales Docs for Jarny Agency.docx" />
+    <Content Include="Notes\Blue orange fla-WPS Office AKSS.pptx" />
+    <Content Include="Notes\BUSINESS ANALYS-WPS Office AKSS.pptx" />
+    <Content Include="Notes\Fresh Blue Business Report-WPS Office Akss.pptx" />
+    <Content Include="Notes\Problem Analysi-WPS Office AKSS.pptx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

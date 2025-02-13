@@ -69,6 +69,15 @@ namespace AKSS_Management.AKodam_Management
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl span_Profile_Role;
 
         /// <summary>
+        /// li_JARNY_Invoice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl li_JARNY_Invoice;
+
+        /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>
         /// <remarks>

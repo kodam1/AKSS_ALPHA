@@ -42,13 +42,13 @@ namespace AKSS_Management.CMIS
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A44;
 
         /// <summary>
-        /// A45 control.
+        /// printButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A45;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor printButton;
 
         /// <summary>
         /// Btn_Edit control.
@@ -121,6 +121,15 @@ namespace AKSS_Management.CMIS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A_Mail;
+
+        /// <summary>
+        /// DivPrint control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivPrint;
 
         /// <summary>
         /// LblPatientID_Data control.

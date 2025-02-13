@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,16 @@ namespace AKSS_Management.AKodam_Management
                 if (Session["UserName"] != null)
                 {
                     ViewState["Session_UserName"] = Session["UserName"].ToString();
+
+                    if (Session["Role"] != null)
+                    {
+                        ViewState["Role"] = Session["Role"].ToString();
+
+                        if (ViewState["Role"].ToString() == "Admin")
+                        {
+                            li_JARNY_Invoice.Visible = true;
+                        }
+                    }                   
                 }
                 else
                 {
