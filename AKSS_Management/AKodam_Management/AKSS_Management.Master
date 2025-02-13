@@ -376,6 +376,7 @@
             </li>
             
           <%--  <li>
+
             <a href="/NiceAdminComponent/components-alerts.aspx">
               <i class="bi bi-circle"></i><span>Alerts</span>
             </a>
