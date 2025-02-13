@@ -364,9 +364,14 @@
                     <i class="bi bi-circle"></i><span>Emp Demo</span>
                 </a>
             </li>
-            <li>
+            <li style="display:none;">
                 <a href="/AKodam_Management/AKSS_Send_bulk_email.aspx">
                     <i class="bi bi-circle"></i><span>Send Bulk Email</span>
+                </a>
+            </li>
+            <li>
+                <a href="/AKodam_Management/AKSS_Profile.aspx">
+                    <i class="bi bi-circle"></i><span>Profile</span>
                 </a>
             </li>
             
