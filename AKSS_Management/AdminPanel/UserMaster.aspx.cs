@@ -62,6 +62,10 @@ namespace AKSS_Management.AdminPanel
                 {
                     gvUserMaster.DataSource = dt;
                     gvUserMaster.DataBind();
+
+
+                    gvUserMaster.UseAccessibleHeader = true;
+                    gvUserMaster.HeaderRow.TableSection = TableRowSection.TableHeader;
                 }
                 else
                 {

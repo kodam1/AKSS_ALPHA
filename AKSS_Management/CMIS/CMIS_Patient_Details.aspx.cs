@@ -72,7 +72,27 @@ namespace AKSS_Management.CMIS
                         LblBP_Data.Text = dt.Rows[0]["BP"].ToString();
                         LblSymptoms_Data.Text = dt.Rows[0]["Symptoms"].ToString();
                         LblAddress_Data.Text = dt.Rows[0]["Address"].ToString();
-                        LblNotes_Data.Text = dt.Rows[0]["Notes"].ToString();                        
+                        LblNotes_Data.Text = dt.Rows[0]["Notes"].ToString();
+                    
+                        //919967534214
+                        string mobile_number = LblCountry_Code_Data.Text.Trim() + LblContactNumber_Data.Text.Trim();
+                        //                        string WhatsApp = "https://api.whatsapp.com/send?phone="+ mobile_number + "&text=tera%20tea%20break%20khabi%20raheta%20hai";
+                        string WhatsApp = "https://api.whatsapp.com/send?phone=" + mobile_number + "&text=Hi how are you ?";
+                        A_WhatsApp.HRef = WhatsApp;
+
+
+                        string Call = "tel:"+ mobile_number;
+                        A_Call.HRef = Call;
+
+                        // string sms = "sms:"+ mobile_number+"?&body=Hi%2520there%252C%2520I%2527d%2520like%2520to%2520place%2520an%2520order%2520for...";
+                        string sms = "sms:" + mobile_number + "?&body=Hi%2520there...";
+                        A_Message.HRef= sms;
+
+                        //<a href="mailto:email@example.com?cc=secondemail@example.com, anotheremail@example.com, &bcc=lastemail@example.com&subject=Mail from our Website&body=Some body text here">Send Email</a>
+                        string mail = "mailto:akshaykodam11@gmail.com?cc=secondeakshay@gmail.com,&bcc=akshaykodam1994@gmail.com&subject=Mail from our Website&body=Cinic from JARNY Software Solutions";
+                        A_Mail.HRef= mail;
+
+
                     }
                 }
                 else

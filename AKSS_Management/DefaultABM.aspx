@@ -32,9 +32,7 @@
       <div class="row">
      
         <!-- Left side columns -->
-        <div class="col-lg-12"  >
-
-         <div class="row">
+        <div class="col-lg-12"  >         
 
           <div class="row">
             <!-- Dashboard Card -->
@@ -431,8 +429,7 @@
 
         </div>
         <!-- End Left side columns -->            
-         
-        </div>
+                 
       </div>
     </section>
 

@@ -29,7 +29,7 @@
 
         <section class="section">
 
-            <asp:Panel ID="Panel1" runat="server" class="card">
+            <asp:Panel ID="Panel1" runat="server" class="card" ScrollBars="Auto">
                 <div class="pagetitle my-3 mx-3 pnlTitle">
                     <h1>Client Follow Up Master List</h1>
                 </div>
@@ -41,9 +41,9 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="card-body">
+                        <%--<div class="card-body">--%>
                             <%--<h5 class="card-title">Client Follow Up Master List</h5>--%>
-                             <asp:Panel ID="PnlGV" runat="server" class="card" ScrollBars="Auto">
+                             <%--<asp:Panel ID="PnlGV" runat="server" class="card" ScrollBars="Auto">--%>
                             <asp:GridView ID="gvClientFollowUpMaster" runat="server" AutoGenerateColumns="false" 
                                 Class="table datatable" 
                                 DataKeyNames="ClientId" 
@@ -98,8 +98,8 @@
                                 </Columns>
                             </asp:GridView>
                             <asp:Label ID="lblMessage" runat="server"></asp:Label>
-                            </asp:Panel>
-                        </div>
+                            <%--</asp:Panel>--%>
+                        <%--</div>--%>
                     </div>
                 </div>
             </asp:Panel>

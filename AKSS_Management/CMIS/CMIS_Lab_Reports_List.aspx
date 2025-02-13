@@ -64,16 +64,16 @@
         </div>
 
 
-<%--    <div class="pagetitle">
-      <h1>User Master</h1>
+    <div class="pagetitle">
+     <%-- <h1>User Master</h1>--%>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/DefaultAKSS.aspx">Home</a></li>
-          <li class="breadcrumb-item">Admin Panel</li>
-          <li class="breadcrumb-item active">User Master</li>
+          <li class="breadcrumb-item"><a href="/DefaultCMIS.aspx">Home</a></li>
+          <%--<li class="breadcrumb-item">Admin Panel</li>--%>
+          <li class="breadcrumb-item active">Lab Reports List</li>
         </ol>
       </nav>
-    </div>--%>
+    </div>
     <!-- End Page Title -->
 
     <section class="section">
@@ -124,7 +124,7 @@
 
          <div class="row">
              <div class="col-lg-12">
-                 <div class="card-body">
+                 <div class="card">
 
                      <div class="row g-3 m-1">
                          <div class="col-lg-12">
@@ -146,7 +146,7 @@
                     <div class="col-lg-12">
  
                       <div class="card ">
-                        <div class="card-body">
+                        <%--<div class="card-body">--%>
                         <div class="row g-3 ">
                             <div class="col-lg-12" style="display:none;">
                               
@@ -166,7 +166,7 @@
                                
                                 <asp:TextBox ID="Txt_GV_Custom_Search" runat="server" BorderColor="Black" class="form-control"
                                     ToolTip="Search here..." Placeholder="Medicine Search ..."
-                                    TextMode="SingleLine" Width="100%" AutoPostBack="true" OnPreRender="Txt_GV_Custom_Search_TextChanged">
+                                    TextMode="SingleLine" Width="95%" AutoPostBack="true" OnPreRender="Txt_GV_Custom_Search_TextChanged">
                                 </asp:TextBox>                                    
                             
 
@@ -260,7 +260,7 @@
                          
                          </Columns>
                      </asp:GridView>
-                        </div>
+                        <%--</div>--%>
 
                       </div>
                     </div>

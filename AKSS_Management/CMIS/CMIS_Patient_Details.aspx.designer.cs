@@ -87,40 +87,40 @@ namespace AKSS_Management.CMIS
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A48;
 
         /// <summary>
-        /// A49 control.
+        /// A_Call control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A49;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A_Call;
 
         /// <summary>
-        /// A50 control.
+        /// A_Message control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A50;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A_Message;
 
         /// <summary>
-        /// A51 control.
+        /// A_WhatsApp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A51;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A_WhatsApp;
 
         /// <summary>
-        /// A52 control.
+        /// A_Mail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A52;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A_Mail;
 
         /// <summary>
         /// LblPatientID_Data control.

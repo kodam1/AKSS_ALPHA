@@ -194,7 +194,7 @@
                              <asp:BoundField DataField="Bcc" HeaderText="Bcc" />
                              <asp:BoundField DataField="Subject" HeaderText="Subject" />
                              <asp:BoundField DataField="Upload_File_Name" HeaderText="Upload_File_Name" />                            
-                             <asp:BoundField DataField="Mail_Body" HeaderText="Mail_Body" />
+                             <%--<asp:BoundField DataField="Mail_Body" HeaderText="Mail_Body" />--%>
                             <asp:BoundField DataField="Status" HeaderText="Status" />
                             <asp:BoundField DataField="CreatedBy" HeaderText="CreatedBy" />
                              <asp:BoundField DataField="CreateDate_Time" HeaderText="CreateDate_Time" />

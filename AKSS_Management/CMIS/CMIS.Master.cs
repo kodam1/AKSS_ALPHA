@@ -21,7 +21,22 @@ namespace AKSS_Management.CMIS
                 {
                     Response.Redirect("/pages-login.aspx");
                 }
+
+                BindOnFirstPageLoad();
             }
+        }
+
+        public void BindOnFirstPageLoad()
+        {
+            Bind_Data();
+        }
+
+        public void Bind_Data()
+        {
+
+            h6_Profile_FullName.InnerText = Session["FullName"].ToString();
+            span_Profile_Role.InnerText = Session["Role"].ToString();
+            span_Profile_UserName.InnerText = Session["UserName"].ToString();
         }
     }
 }

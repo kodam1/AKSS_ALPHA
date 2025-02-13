@@ -42,6 +42,33 @@ namespace AKSS_Management.AKodam_Management
         protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
+        /// span_Profile_UserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl span_Profile_UserName;
+
+        /// <summary>
+        /// h6_Profile_FullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl h6_Profile_FullName;
+
+        /// <summary>
+        /// span_Profile_Role control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl span_Profile_Role;
+
+        /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>
         /// <remarks>

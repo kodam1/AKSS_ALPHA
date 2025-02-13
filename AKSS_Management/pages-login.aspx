@@ -1,4 +1,5 @@
-﻿<%@ Page Title="Login" Async="true" Language="C#" AutoEventWireup="true" CodeBehind="pages-login.aspx.cs" 
+﻿<%@ Page Title="Login" Async="true" Language="C#" AutoEventWireup="true" 
+    CodeBehind="pages-login.aspx.cs" 
     Inherits="AKSS_Management.pages_login" %>
 
 <!DOCTYPE html>
@@ -13,7 +14,9 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <%--<link href="assets/img/favicon.png" rel="icon">--%>
+    <link href="assets/img/Jarny_logo1.jpg" rel="icon"  style="border-radius:100%">
+    
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -55,8 +58,12 @@
 
               <div class="d-flex justify-content-center py-4">
                 <a href="/Default.aspx" class="logo d-flex align-items-center w-auto">
-                  <img src="assets/img/logo.png" alt="">
-                  <span class="d-none d-lg-block">AKSS</span>
+                  <%--<img src="assets/img/logo.png" alt="">--%>
+                    <img src="assets/img/Jarny_logo1.jpg" alt="" style="border-radius:100%">
+                    
+                  <%--<span class="d-none d-lg-block">AKSS</span>--%>
+                    <span class="d-none d-lg-block">JARNY</span>
+                    
                 </a>
               </div><!-- End Logo -->
 
@@ -97,7 +104,10 @@
                     </div>
                     <div class="col-12">
                       <%--<button class="btn btn-primary w-100" type="submit">Login</button>--%>
-                        <asp:Button ID="BtnSubmit" runat="server"  class="btn btn-primary w-100" OnClick="BtnSubmit_Click"  Text="Submit"/>
+                        <asp:Button ID="BtnSubmit" runat="server" class="btn btn-primary w-100" OnClick="BtnSubmit_Click"  Text="Submit"/>
+                    </div>
+                    <div class="col-12 text-center">
+                      <p class="small mb-0"><a href="#" onclick="ForgotPassword();" >Forgot Password</a></p>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Don't have account? <a href="pages-register.aspx">Create an account</a></p>
@@ -112,7 +122,8 @@
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                Designed by <a href="#">Akshay Kodam</a>
+                <%--Designed by <a href="#">Akshay Kodam</a>--%>
+                  Designed by <a href="#">JARNY Team's</a>
               </div>
 
             </div>
@@ -124,6 +135,12 @@
     </div>
     </form>
   </main><!-- End #main -->
+
+ <script>
+     function ForgotPassword() {
+         alert("Contact To Admin, To Recover Your Password !!");
+     }
+ </script>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

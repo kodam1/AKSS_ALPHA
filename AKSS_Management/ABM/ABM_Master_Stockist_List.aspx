@@ -5,7 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .datatable-input {            
-                width: 320px !important;
+                width: 315px !important;
         }
     </style>
 </asp:Content>

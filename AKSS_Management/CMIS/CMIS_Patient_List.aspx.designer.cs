@@ -69,15 +69,6 @@ namespace AKSS_Management.CMIS
         protected global::System.Web.UI.WebControls.Button BtnExportToExcel;
 
         /// <summary>
-        /// PnlGV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PnlGV;
-
-        /// <summary>
         /// A1_BtnAddPatient control.
         /// </summary>
         /// <remarks>
@@ -85,6 +76,15 @@ namespace AKSS_Management.CMIS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A1_BtnAddPatient;
+
+        /// <summary>
+        /// Panel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel2;
 
         /// <summary>
         /// Txt_GV_Custom_Search1 control.

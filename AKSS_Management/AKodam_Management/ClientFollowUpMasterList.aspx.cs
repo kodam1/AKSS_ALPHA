@@ -43,6 +43,9 @@ namespace AKSS_Management.AKodam_Management
                 {
                     gvClientFollowUpMaster.DataSource = dt;
                     gvClientFollowUpMaster.DataBind();
+
+                    gvClientFollowUpMaster.UseAccessibleHeader = true;
+                    gvClientFollowUpMaster.HeaderRow.TableSection = TableRowSection.TableHeader;
                 }
                 else
                 {

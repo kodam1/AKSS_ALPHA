@@ -23,8 +23,10 @@ namespace AKSS_Management
 
         protected async void BtnSubmit_Click(object sender, EventArgs e)
         {
+          
             try
-            {               
+           {               
+
                 string spname = "CRUD_UserMaster";
                 SqlParameter[] parameters = {
                     new SqlParameter("@CRUD_Action", "CHECK_LOGIN_CREDIENTIALS"),
@@ -56,19 +58,22 @@ namespace AKSS_Management
 
                         if (dt.Rows[0]["Role"].ToString() != "" && dt.Rows[0]["Role"].ToString() == "Admin")
                         {
-                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/Default.aspx';", true);
+                            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/Default.aspx';", true);
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "window.location.href='/Default.aspx';", true);
                         }
                         else if (dt.Rows[0]["Role"].ToString() != "" && dt.Rows[0]["Role"].ToString() == "ABM")
                         {
-                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/DefaultABM.aspx';", true);
+                            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/DefaultABM.aspx';", true);
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "window.location.href='/DefaultABM.aspx';", true);
                         }
                         else if (dt.Rows[0]["Role"].ToString() != "" && dt.Rows[0]["Role"].ToString() == "User")
                         {
-                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/DefaultCMIS.aspx';", true);
-                        }                                 
+                            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/DefaultCMIS.aspx';", true);
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "window.location.href='/DefaultCMIS.aspx';", true);
+                        }
                         else
-                        {
-                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/Default.aspx';", true);
+                        {                            
+                            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Login Successfull !!');window.location.href='/Default.aspx';", true);
                         }
 
                         //Response.Redirect("/Default.aspx");

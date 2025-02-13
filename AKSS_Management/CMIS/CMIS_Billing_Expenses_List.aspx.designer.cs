@@ -96,6 +96,15 @@ namespace AKSS_Management.CMIS
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A1_BtnAddBillingExpenses;
 
         /// <summary>
+        /// Panel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel2;
+
+        /// <summary>
         /// Txt_GV_Custom_Search1 control.
         /// </summary>
         /// <remarks>

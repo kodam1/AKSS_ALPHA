@@ -7,11 +7,14 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>AKSS Dashboard</h1>
+      <%--<h1>AKSS Dashboard</h1>--%>
+        <h1>JARNY Dashboard</h1>
+        
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">AKSS dashboard</li>
+          <%--<li class="breadcrumb-item active">AKSS dashboard</li>--%>
+            <li class="breadcrumb-item active">JARNY dashboard</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->

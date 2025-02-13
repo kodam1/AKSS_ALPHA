@@ -140,7 +140,7 @@
 
          <div class="row">
              <div class="col-lg-12">
-                 <div class="card-body">
+                 <div class="card">
                      <%--<h5 class="card-title">
                          Billing Expenses List                        
                       
@@ -166,7 +166,7 @@
                     <div class="col-lg-12">
  
                       <div class="card ">
-                        <div class="card-body">
+                        <%--<div class="card-body">--%>
 
                             <div class="row mt-1">
                                 <div class="col-md-12 text-end">
@@ -203,7 +203,7 @@
                                
                                 <asp:TextBox ID="Txt_GV_Custom_Search" runat="server" BorderColor="Black" class="form-control"
                                     ToolTip="Search here..." Placeholder="Patient Search ..."
-                                    TextMode="SingleLine" Width="100%" AutoPostBack="true" OnPreRender="Txt_GV_Custom_Search_TextChanged">
+                                    TextMode="SingleLine" Width="95%" AutoPostBack="true" OnTextChanged="Txt_GV_Custom_Search_TextChanged">
                                 </asp:TextBox>                                    
                             
 
@@ -325,7 +325,7 @@
                          
                          </Columns>
                      </asp:GridView>
-                        </div>
+                        <%--</div>--%>
 
                       </div>
                     </div>

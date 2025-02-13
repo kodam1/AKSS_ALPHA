@@ -1,4 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CMIS/CMIS.Master" AutoEventWireup="true" CodeBehind="DefaultCMIS.aspx.cs" Inherits="AKSS_Management.DefaultCMIS" %>
+﻿<%@ Page Title="JARNY dashboard" Language="C#" MasterPageFile="~/JARNY/JARNY.Master" 
+    AutoEventWireup="true" CodeBehind="DefaultJARNY.aspx.cs" 
+    Inherits="AKSS_Management.DefaultJARNY" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
         <style >
@@ -14,23 +17,433 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Clinic Mangement Information System Dashboard</h1>
+      <h1>JARNY Software Solutions Dashboard</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">CMIS dashboard</li>
+          <li class="breadcrumb-item"><a href="/DefaultJARNY.aspx">Home</a></li>
+          <li class="breadcrumb-item active">JARNY dashboard</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
 
-   <%--####################################### CMIS DASHBOARD START HERE ###############################--%>
+ <%--####################################### ABM DASHBOARD START HERE ###############################--%>
 
-    <section id="Section_Cmis1" class="section dashboard" style="display:block">
+  <section id="Section_JARNY1" class="section dashboard" > <%--style="display:block;height:100%"--%>
+    <div class="row">
+   
+      <!-- Left side columns -->
+      <div class="col-lg-12"  >
+       
+        <div class="row">
+          <!-- Dashboard Card -->
+          
+          <div class="col-xxl-4 col-md-6">
+              
+             
+            <div class="card info-card sales-card"  style="cursor: pointer;">
+                
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+              
+                <a href="/ABM/ABM_Category_Dashboard.aspx" target="_blank"> 
+              <div class="card-body">
+                <h5 class="card-title">Dashboard 
+                    <%--<span>| Today</span>--%>
+
+                </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                   <i class="bi bi-puzzle"></i>
+                  </div>
+                  <div class="ps-3">
+                    <%--<h6>145</h6>--%>
+                    <%--<span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
+
+                  </div>
+                </div>
+              </div>                    
+                </a>
+            </div>
+           
+               
+          </div>
+                       
+          <!-- End Dashboard Card -->
+
+          <!-- Dr. Appointments List Card -->
+
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card revenue-card" style="cursor: pointer;">
+
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+
+              <a href="/ABM/ABM_List_Appointments.aspx" target="_blank">
+              <div class="card-body">
+                <h5 class="card-title">Dr. Appointments
+                    <%--<span>| This Month</span>--%>
+
+                </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-person-check"></i>
+                  </div>
+                  <div class="ps-3">
+                    <%--<h6>3,264</h6>--%>
+                    <%--<span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
+
+                  </div>
+                </div>
+              </div>
+               </a>
+            </div>
+          </div>
+         
+          <!-- End Appointments Card -->
+
+          <!-- Doctor Card -->
+        
+          <div class="col-xxl-4 col-xl-12" style="display:block;">
+
+            <div class="card info-card customers-card" style="cursor: pointer;">
+
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+
+              <a href="/ABM/ABM_Master_Doctor_List.aspx" target="_blank"> 
+              <div class="card-body">
+                <h5 class="card-title">Doctor Master
+                    <%--<span>| This Year</span>--%>
+
+                </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" >
+                    <i class="bi bi-person-plus"></i>
+                  </div>
+                  <div class="ps-3">
+                    <%--<h6>1244</h6>--%>
+                    <%--<span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>--%>
+
+                  </div>
+                </div>
+             
+              </div>
+              </a>
+            </div>
+
+          </div>            
+          
+          <!-- End Doctor Card -->
+
+        </div>
+
+        <div class="row"  style="display:none;"><%-- style="display:block;"--%>
+
+          <!-- Chemist Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card sales-card" style="cursor: pointer;">
+
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+
+              <a href="/ABM/ABM_Master_Chemist_List.aspx" target="_blank">
+              <div class="card-body">
+                <h5 class="card-title">Chemist Master
+                    <%--<span>| Today</span>--%>
+
+                </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background-color: #f2ff0045;">
+                     <i class="bi bi-newspaper"></i>
+                  </div>
+                  <div class="ps-3">
+                    <%--<h6>637</h6>--%>
+                    <%--<span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
+
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <!-- End Chemist Card -->
+
+          <!-- Stockist Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card revenue-card" style="cursor: pointer;">
+
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+
+              <a href="/ABM/ABM_Master_Stockist_List.aspx" target="_blank">
+              <div class="card-body">
+                <h5 class="card-title">Stockist Master 
+                    <%--<span>| This Month</span>--%>
+
+                </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background: #f5dce7;">
+                     <i class="bi bi-file-plus"></i>
+                  </div>
+                  <div class="ps-3">
+                    <%--<h6>1376</h6>--%>
+                    <%--<span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
+
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <!-- End Stockist Card -->
+
+          <!-- Prescriptions Card -->
+          <div class="col-xxl-4 col-md-6" style="display:none;">
+
+            <div class="card info-card customers-card" style="cursor: pointer;">
+
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+
+              <a href="/CMIS/CMIS_Create_Prescription_Details.aspx" target="_blank">
+              <div class="card-body">
+                <h5 class="card-title">Prescriptions 
+                    <%--<span>| This Year</span>--%>
+
+                </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background: #e6d4ee;">
+                     <i class="bi bi-journal-text"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>2338</h6>
+                    <%--<span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>--%>
+
+                  </div>
+                </div>
+              
+              </div>
+              </a>
+            </div>
+
+          </div>            
+          <!-- End Prescriptions Card -->
+
+        </div>
+
+        <div class="row" style="display:none;">
+
+          <!-- Lab Reports Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card sales-card" style="cursor: pointer;">
+
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+
+              <a href="/CMIS/CMIS_Lab_Reports_List.aspx" target="_blank"> 
+              <div class="card-body">
+                <h5 class="card-title">Lab Reports 
+                    <%--<span>| Today</span>--%>
+
+                </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background: #ccd3cd;">
+                    <i class="bi bi-newspaper"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>790</h6>
+                    <%--<span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
+
+                  </div>
+                </div>
+              </div>
+              </a>
+                  
+
+            </div>
+          </div>
+          <!-- End Lab Reports Card -->
+
+          <!-- Import/Export Databases Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card revenue-card" style="cursor: pointer;">
+
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+
+              <a href="/CMIS/CMIS_Import_Export_Databases.aspx" target="_blank">
+              <div class="card-body">
+                <h5 class="card-title">Import/Export Databases 
+                    <%--<span>| This Month</span>--%>
+
+                </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background: #cfedf0;">
+                     <i class="bi bi-download"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>98</h6>
+                    <%--<span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
+
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <!-- End Import/Export Databases Card -->
+
+          <!-- Certificates Card -->
+          <div class="col-xxl-4 col-xl-12">
+
+            <div class="card info-card customers-card" style="cursor: pointer;">
+
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+
+              <a href="/CMIS/CMIS_Create_Certificates.aspx" target="_blank"> 
+              <div class="card-body">
+                <h5 class="card-title">Certificates 
+                    <%--<span>| This Year</span>--%>
+
+                </h5>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="background: #e0eef0;">
+                    <i class="bi bi-card-checklist"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>101</h6>
+                    <%--<span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>--%>
+
+                  </div>
+                </div>
+
+              </div>
+              </a>
+
+            </div>
+
+          </div>            
+          <!-- End Certificates Card -->
+
+        </div>
+      
+      <!-- End Left side columns -->            
+       
+      </div>
+    </div>
+  </section>
+
+
+
+   <%--####################################### ABM DASHBOARD START HERE ###############################--%>
+
+    <section id="Section_Cmis1" class="section dashboard" style="display:none;height:100%">
       <div class="row">
      
         <!-- Left side columns -->
-        <div class="col-lg-12"  style="display:block">         
+        <div class="col-lg-12"  >
+        
 
           <div class="row">
             <!-- Dashboard Card -->
@@ -53,7 +466,7 @@
                   </ul>
                 </div>
                 
-                  <a href="/CMIS/CMIS_Category_Dashboard.aspx" target="_blank"> 
+                  <a href="/ABM/ABM_Category_Dashboard.aspx" target="_blank"> 
                 <div class="card-body">
                   <h5 class="card-title">Dashboard 
                       <%--<span>| Today</span>--%>
@@ -65,7 +478,7 @@
                      <i class="bi bi-puzzle"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>145</h6>
+                      <%--<h6>145</h6>--%>
                       <%--<span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
 
                     </div>
@@ -79,7 +492,8 @@
                          
             <!-- End Dashboard Card -->
 
-            <!-- Appointments Card -->
+            <!-- Dr. Appointments List Card -->
+
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card revenue-card" style="cursor: pointer;">
 
@@ -96,9 +510,9 @@
                   </ul>
                 </div>
 
-                <a href="/CMIS/CMIS_Appointment_Details.aspx" target="_blank">
+                <a href="/ABM/ABM_List_Appointments.aspx" target="_blank">
                 <div class="card-body">
-                  <h5 class="card-title">Appointment & Consultations 
+                  <h5 class="card-title">Dr. Appointments
                       <%--<span>| This Month</span>--%>
 
                   </h5>
@@ -108,7 +522,7 @@
                       <i class="bi bi-person-check"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>3,264</h6>
+                      <%--<h6>3,264</h6>--%>
                       <%--<span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
 
                     </div>
@@ -117,10 +531,12 @@
                  </a>
               </div>
             </div>
+           
             <!-- End Appointments Card -->
 
-            <!-- Patients Card -->
-            <div class="col-xxl-4 col-xl-12">
+            <!-- Doctor Card -->
+          
+            <div class="col-xxl-4 col-xl-12" style="display:block;">
 
               <div class="card info-card customers-card" style="cursor: pointer;">
 
@@ -137,9 +553,9 @@
                   </ul>
                 </div>
 
-                <a href="/CMIS/CMIS_Patient_List.aspx" target="_blank"> 
+                <a href="/ABM/ABM_Master_Doctor_List.aspx" target="_blank"> 
                 <div class="card-body">
-                  <h5 class="card-title">Patients 
+                  <h5 class="card-title">Doctor Master
                       <%--<span>| This Year</span>--%>
 
                   </h5>
@@ -149,7 +565,7 @@
                       <i class="bi bi-person-plus"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>1244</h6>
+                      <%--<h6>1244</h6>--%>
                       <%--<span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>--%>
 
                     </div>
@@ -160,13 +576,14 @@
               </div>
 
             </div>            
-            <!-- End Patients Card -->
+            
+            <!-- End Doctor Card -->
 
           </div>
 
-          <div class="row">
+          <div class="row" ><%-- style="display:block;"--%>
 
-            <!-- Billing/Expenses Card -->
+            <!-- Chemist Card -->
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card" style="cursor: pointer;">
 
@@ -183,9 +600,9 @@
                   </ul>
                 </div>
 
-                <a href="/CMIS/CMIS_Billing_Expenses_List.aspx" target="_blank">
+                <a href="/ABM/ABM_Master_Chemist_List.aspx" target="_blank">
                 <div class="card-body">
-                  <h5 class="card-title">Billing/Expenses 
+                  <h5 class="card-title">Chemist Master
                       <%--<span>| Today</span>--%>
 
                   </h5>
@@ -195,7 +612,7 @@
                        <i class="bi bi-newspaper"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>637</h6>
+                      <%--<h6>637</h6>--%>
                       <%--<span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
 
                     </div>
@@ -204,9 +621,9 @@
                 </a>
               </div>
             </div>
-            <!-- End Billing/Expenses Card -->
+            <!-- End Chemist Card -->
 
-            <!-- Medicines Card -->
+            <!-- Stockist Card -->
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card revenue-card" style="cursor: pointer;">
 
@@ -223,9 +640,9 @@
                   </ul>
                 </div>
 
-                <a href="/CMIS/CMIS_Medicine_List.aspx" target="_blank">
+                <a href="/ABM/ABM_Master_Stockist_List.aspx" target="_blank">
                 <div class="card-body">
-                  <h5 class="card-title">Medicines 
+                  <h5 class="card-title">Stockist Master 
                       <%--<span>| This Month</span>--%>
 
                   </h5>
@@ -235,7 +652,7 @@
                        <i class="bi bi-file-plus"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>1376</h6>
+                      <%--<h6>1376</h6>--%>
                       <%--<span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>--%>
 
                     </div>
@@ -244,10 +661,10 @@
                 </a>
               </div>
             </div>
-            <!-- End Medicines Card -->
+            <!-- End Stockist Card -->
 
             <!-- Prescriptions Card -->
-            <div class="col-xxl-4 col-xl-12">
+            <div class="col-xxl-4 col-md-6" style="display:none;">
 
               <div class="card info-card customers-card" style="cursor: pointer;">
 
@@ -291,7 +708,7 @@
 
           </div>
 
-          <div class="row">
+          <div class="row" style="display:none;">
 
             <!-- Lab Reports Card -->
             <div class="col-xxl-4 col-md-6">
@@ -423,7 +840,7 @@
 
         </div>
         <!-- End Left side columns -->            
-                 
+                
       </div>
     </section>
 
@@ -1075,3 +1492,6 @@
 
 
 </asp:Content>
+
+
+
