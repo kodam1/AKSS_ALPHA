@@ -1827,6 +1827,8 @@
     <Content Include="Notes\BUSINESS ANALYS-WPS Office AKSS.pptx" />
     <Content Include="Notes\Fresh Blue Business Report-WPS Office Akss.pptx" />
     <Content Include="Notes\Problem Analysi-WPS Office AKSS.pptx" />
+    <Content Include="Notes\Angular 18 course.pptx" />
+    <Content Include="Notes\API Full Course.pptx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
